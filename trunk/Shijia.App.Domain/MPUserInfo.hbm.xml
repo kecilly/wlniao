@@ -1,0 +1,23 @@
+<?xml version="1.0"  encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Shijia.App.Domain" namespace="Shijia.App.Domain">
+  <class name="Shijia.App.Domain.MPUserInfo" table="MPUserInfo">
+    <cache usage="read-write"/>
+    <id name="ID" column="ID" type="decimal" unsaved-value="0">
+      <column name="ID" index="PK_MPUserInfo"/>
+      <generator class="identity" />
+    </id>
+    <property name="OpenId" column="OpenId" type="string"  />
+    <property name="NickName" column="NickName" type="string"  />
+    <property name="RemarkName" column="RemarkName" type="string"  />
+    <property name="MobileNumber" column="MobileNumber" type="string"  />
+    <property name="BirthdayY" column="BirthdayY" type="int"  />
+    <property name="BirthdayM" column="BirthdayM" type="int"  />
+    <property name="BirthdayD" column="BirthdayD" type="int"  />
+    <property name="Sex" column="Sex" type="int"  />
+    <property name="Country" column="Country" type="string"  />
+    <property name="Province" column="Province" type="string"  />
+    <property name="City" column="City" type="string"  />
+    <property name="HeadImgUrl" column="HeadImgUrl" type="string"  />
+
+  </class>
+</hibernate-mapping>

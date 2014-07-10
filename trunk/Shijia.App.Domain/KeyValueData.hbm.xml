@@ -1,0 +1,14 @@
+<?xml version="1.0"  encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Shijia.App.Domain" namespace="Shijia.App.Domain">
+	<class name="Shijia.Domain.KeyValueData, Shijia.Domain" table="KeyValueData">
+		<id name="Id" column="Id" type="int" unsaved-value="0">
+      			<generator class="native" />       			
+      	</id>      		
+		<property name="KeyName" column="KeyName" type="string"  />
+		<property name="KeyValue" column="KeyValue" type="string"  />
+		<property name="Description" column="Description" type="string"  />
+		<property name="UpdateTime" column="UpdateTime" type="DateTime"  />
+		<property name="EncodedValue" column="EncodedValue" type="string"  />
+				
+	</class>
+</hibernate-mapping>
