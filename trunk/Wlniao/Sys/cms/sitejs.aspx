@@ -1,0 +1,1 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="sitejs.aspx.cs" Inherits="Wlniao.Cms.SiteJs" %>
