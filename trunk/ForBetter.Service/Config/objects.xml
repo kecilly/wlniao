@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<objects xmlns="http://www.springframework.net">
+  <object id="AccountServiceImpl" parent="BaseTransactionManager">
+    <property name="Target">
+      <object  type="Shijia.Service.AccountService"    >
+        <!-- ref 表示引用的对象 -->
+        <property name="AccountDao" ref="AccountDaoImpl"  />
+        <property name="CurrentRepository" ref="AccountDaoImpl"  />
+      </object>
+    </property>
+  </object>
+
+  <object id="NoticeServiceImpl" parent="BaseTransactionManager">
+    <property name="Target">
+      <object  type="Shijia.Service.NoticeService"    >
+        <!-- ref 表示引用的对象 -->
+        <property name="NoticeDao" ref="NoticeDaoImpl"  />
+        <property name="CurrentRepository" ref="NoticeDaoImpl"  />
+      </object>
+    </property>
+  </object>
+
+  <object id="HandleRuleServiceImpl" parent="BaseTransactionManager">
+    <property name="Target">
+      <object  type="Shijia.Service.HandleRuleService"    >
+        <!-- ref 表示引用的对象 -->
+        <property name="HandleRuleDao" ref="HandleRuleDaoImpl"  />
+        <property name="CurrentRepository" ref="HandleRuleDaoImpl"  />
+      </object>
+    </property>
+  </object>
+
+  <object id="KeyValueDataServiceImpl" parent="BaseTransactionManager">
+    <property name="Target">
+      <object  type="Shijia.Service.KeyValueDataService"    >
+        <!-- ref 表示引用的对象 -->
+        <property name="KeyValueDataDao" ref="KeyValueDataDaoImpl"  />
+        <property name="CurrentRepository" ref="KeyValueDataDaoImpl"  />
+      </object>
+    </property>
+  </object>
+
+  <object id="MPMenuServiceImpl" parent="BaseTransactionManager">
+    <property name="Target">
+      <object  type="Shijia.Service.MPMenuService"    >
+        <!-- ref 表示引用的对象 -->
+        <property name="MPMenuDao" ref="MPMenuDaoImpl"  />
+        <property name="CurrentRepository" ref="MPMenuDaoImpl"  />
+      </object>
+    </property>
+  </object>
+
+  <object id="MPUserInfoServiceImpl" parent="BaseTransactionManager">
+    <property name="Target">
+      <object  type="Shijia.Service.MPUserInfoService"    >
+        <!-- ref 表示引用的对象 -->
+        <property name="MPUserInfoDao" ref="MPUserInfoDaoImpl"  />
+        <property name="CurrentRepository" ref="MPUserInfoDaoImpl"  />
+      </object>
+    </property>
+  </object>
+
+  <object id="MPWechatServiceImpl" parent="BaseTransactionManager">
+    <property name="Target">
+      <object  type="Shijia.Service.MPWechatService"    >
+        <!-- ref 表示引用的对象 -->
+        <property name="MPWechatDao" ref="MPWechatDaoImpl"  />
+        <property name="HandleRuleDao" ref="HandleRuleDaoImpl"  />
+        <property name="CurrentRepository" ref="MPWechatDaoImpl"  />
+      </object>
+    </property>
+  </object>
+ 
+</objects>
