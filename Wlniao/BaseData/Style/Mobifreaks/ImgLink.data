@@ -1,0 +1,7 @@
+﻿[
+{"Id":Logo,"Desc":"Logo","Title":"标题","Src":"/BaseData/Style/Mobifreaks/logo.png","Link":"#"},
+{"Id":Nav01,"Desc":"第一行 无图","Title":"标题","Src":"#","Link":"#"},
+{"Id":Nav02,"Desc":"第二行 无图","Title":"标题","Src":"#","Link":"#"},
+{"Id":Nav03,"Desc":"第三行 无图","Title":"标题","Src":"#","Link":"#"},
+{"Id":Nav04,"Desc":"第四行 无图","Title":"标题","Src":"#","Link":"#"}
+]

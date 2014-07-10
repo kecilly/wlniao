@@ -1,0 +1,222 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<title>{tag.SiteName}</title>
+    <style type="text/css">
+    html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td { margin: 0; padding: 0; border: 0; outline: 0; font-size: 100%; vertical-align: baseline; background: transparent; } body { line-height: 1; } ol, ul { list-style: none; } blockquote, q { quotes: none; } blockquote:before, blockquote:after, q:before, q:after { content: ''; content: none; } :focus { outline: 0; } ins { text-decoration: none; } del { text-decoration: line-through; } table { border-collapse: collapse; border-spacing: 0; }
+    .clearfix:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; } .clearfix { display: inline-block; } /* Hide from IE Mac \*/ .clearfix { display: block; } /* End hide from IE Mac */ .none { display: none; } /* End Clearfix */
+    /*-----------------------------------------------------------------------------------*/
+    html{ height:100%;}
+    body{font-family:Arial, Helvetica, sans-serif;padding:0;font-size:12px;margin:0 auto;color: #333333; background-color:#0c2136;}
+    .home{height:100%;}
+    .homeiphone_full{height:100%;}
+    .homeiphone_app{height:116.85%;}
+
+    body#page{height:auto;}
+    .clear{clear:both;}
+    a{ text-decoration:none;color:#8A50C1;}
+    span.tag{color:#8A50C1;}
+    span.subtitle_descr{ font-size:14px; color:#6f6f6f; padding:0 0 20px 0; font-family:Open Sans; font-weight:normal; line-height:20px; display:block;}
+    p{padding:0;margin:0px;text-align:left;line-height:20px;}
+    p.main_text{ padding:0 0 15px 0;}
+    .videocontainer{ max-width:96%; display: block; 
+    -moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px; background-color:#ececec; border:1px #d7d7d7 solid; padding:1.5%;}
+    a.call_button{ background:url({tag.DataUrl}/BaseData/Style/MyStyle/phone.png) no-repeat left; float:left; clear:both;
+    width:92%; display: block; text-align:center; font-family:Open Sans; font-size:22px; color:#000000;
+    -moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px; background-color:#ececec; border:1px #d7d7d7 solid; padding:4%;}
+
+
+    /* Structure
+    /*------------------------------------------*/
+    #container{ width:640px; height:100%; margin:auto; position:relative;}
+    #pagecontainer{width:640px; height:auto; padding:5px 0 5px 0; margin:auto; background:url({tag.DataUrl}/BaseData/Style/MyStyle/pages_bg.jpg) no-repeat center top #4a2d70; position:relative;}
+    #main_panels{ width:100%; height:100%;}
+    .content{ width:86%; margin:2%; height:auto; background-color:#FFFFFF;
+    -moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px; padding:5%;
+    }
+    #header{ width:96%; height:auto; background-color:#000000; text-align:center; color:#FFFFFF; margin:0 2%; z-index:999; position:relative;}
+    .page_title{ float:left; width:56%; text-align:center; padding:5% 0 0 0; margin:1% 0 0 0; font-weight:bold;}
+    #footer{ width:96%; height:auto; background-color:#000000; text-align:center; color:#FFFFFF; margin:0 2%; z-index:999; position:relative;}
+
+    a.back_button{ float:left;color:#c5c5c5; font-weight:bold;}
+    a#menu_open{ float:right;color:#c5c5c5; font-weight:bold;}
+    a#menu_close{ float:right;color:#fff; font-weight:bold;display:none;}
+    a#top{ float:right; width:20%;padding:5% 0 5% 0; margin:1%; color:#c5c5c5; font-weight:bold;}
+
+
+    /* Navigation
+    /*------------------------------------------*/
+    #bottom_nav{ position:absolute; bottom:0px; left:0px; background:url({tag.DataUrl}/BaseData/Style/MyStyle/nav_bg.png) repeat-x top;height:auto; width:640px; }
+    #pages_nav{ height:auto; width:100%; position:absolute; top:-200px; left:0px; z-index:888;}
+
+    .flex-container a:active,
+    .icons_nav a:active {outline: none;}
+    .slides,
+    .flex-control-nav,
+    .flex-direction-nav {margin: 0; padding: 0; list-style: none;} 
+
+    .icons_nav {padding:0; width:100%; margin: 0;}
+    .icons_nav .slides li a{ float:left; margin:0 0 0 5%;padding:5% 0 0 0; font-size:15px; color:#FFFFFF; text-align:center; line-height:35px; width:19.5%;}
+    .icons_nav .paginated {padding:0 0 0 4%; width:94%; margin: 0;}
+    .icons_nav .paginated .slides li a{ float:left; margin:0 0 0 4%;padding:5% 0 0 0; font-size:15px; color:#FFFFFF; text-align:center; line-height:35px; width:18.5%;}
+    .icons_nav .slides > li {display: none;}
+    .icons_nav .slides img {max-width: 100%; display: block;}
+    .flex-pauseplay span {text-transform: capitalize;}
+
+    .panels_slider {width: 100%; height:100%; margin: 0; padding: 0;}
+    .panels_slider .slides > li {display: none;} 
+    .panels_slider .slides img {max-width: 100%; display: block;}
+
+    .images_slider_container{max-width:96%; display: block;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px; background-color:#ececec; border:1px #d7d7d7 solid; padding:1.5%; margin:0 0 20px 0;}
+    .images_slider {width: 100%; margin:0; padding: 0; position:relative;}
+    .images_slider .slides > li {display: none;} 
+    .images_slider .slides img {max-width: 100%; display: block;}
+
+    .slides:after {content: "."; display: block; clear: both; visibility: hidden; line-height: 0; height: 0;} 
+    html[xmlns] .slides {display: block;} 
+    * html .slides {height: 1%;}
+
+    .no-js .slides > li:first-child {display: block;}
+
+    .icons_nav { position: relative;zoom: 1;}
+    .icons_nav .slides {zoom: 1;}
+    .icons_nav .slides > li {position: relative; }
+    .flex-container {zoom: 1; position: relative;}
+
+    .panels_slider ol.flex-control-nav {width: 100%; position: absolute; bottom:30%; text-align: center;}
+    .images_slider ol.flex-control-nav {width: 100%; position: absolute; bottom:0%; text-align: center; background:url({tag.DataUrl}/BaseData/Style/MyStyle/nav_bg.png) repeat-x top; padding:15px 0 15px 0;}
+    .icons_nav ol.flex-control-nav {width: 100%; position: absolute; top:5%; text-align: center; padding:0;}
+    .flex-control-nav li {margin: 0 0 0 5px; display: inline-block; zoom: 1; *display: inline;}
+    .flex-control-nav li:first-child {margin: 0;}
+    .flex-control-nav li a {width: 13px; height: 13px; display: block; background: url({tag.DataUrl}/BaseData/Style/MyStyle/bg_control_nav.png) no-repeat 0 0; cursor: pointer; text-indent: -9999px;}
+    .flex-control-nav li a:hover {background-position: 0 -13px;}
+    .flex-control-nav li a.active {background-position: 0 -26px; cursor: default;}
+
+    .icons_nav ul.flex-direction-nav a.prev{ position:absolute; bottom:40%; left:10px; text-indent:-200px; overflow:hidden; background:url({tag.DataUrl}/BaseData/Style/MyStyle/prev.png) no-repeat center; width:11px; height:21px;}
+    .icons_nav ul.flex-direction-nav a.next{ position:absolute; bottom:40%; right:10px;text-indent:-200px; overflow:hidden; background:url({tag.DataUrl}/BaseData/Style/MyStyle/next.png) no-repeat center; width:11px; height:21px;}
+
+    .icons_nav_nojs {padding:0; width:100%; margin: 0;}
+    .icons_nav_nojs ul li a{ float:left; margin:0 0 0 5%;padding:5% 0 0 0; font-size:15px; color:#FFFFFF; text-align:center; line-height:35px; width:19.5%;}
+    .icons_nav_nojs ul img {max-width: 100%; display: block;}
+
+    /*-----------------------------------------------------------------------------------*/
+    .es-carousel-wrapper{padding:5px 0 0 0;position:relative;margin-bottom:20px;}
+    .es-carousel{overflow:hidden;}
+    .es-carousel ul{display:none;}
+    .es-carousel ul li{height:100%;float:left;display:block;margin:0 0 0 0px;}
+    .es-carousel ul li a{display:block;margin:0 0px 0 0;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px; background-color:#ececec; border:1px #eaeaea solid; padding:4%;}
+    .es-carousel ul li.selected a{-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px; background-color:#ececec; border:1px #d7d7d7 solid; padding:4%;}
+    .es-carousel ul li a img{display:block;max-height:100%;max-width:100%;}
+    .es-nav span.es-nav-prev{position:absolute;top:50%;left:-10px;background:url({tag.DataUrl}/BaseData/Style/MyStyle/thumbs_nav_left.png) no-repeat center;width:27px;height:27px;text-indent:-9000px;cursor:pointer;margin-top:-13px;}
+    .es-nav span.es-nav-next{position:absolute;top:50%;right:-10px;background:url({tag.DataUrl}/BaseData/Style/MyStyle/thumbs_nav_right.png) no-repeat center;width:27px;height:27px;text-indent:-9000px;cursor:pointer;margin-top:-13px;}
+
+    /*-----------------------------------------------------------------------------------*/
+    .rg-image-wrapper{position:relative;z-index:888;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px; background-color:#ececec; border:1px #d7d7d7 solid; padding:1%;}
+    .rg-image{position:relative;text-align:center;line-height:0px;}
+    .rg-image img{max-height:100%;max-width:100%;}
+    .rg-image-nav a{position:absolute;top:2%;left:1%;background:#000 url({tag.DataUrl}/BaseData/Style/MyStyle/nav.png) no-repeat -45% 50%;width:35px;height:96%;text-indent:-9000px;cursor:pointer;opacity:0.5;outline:none;z-index:999;}
+    .rg-image-nav a.rg-image-nav-next{right:1%;left:auto;background-position:140% 50%;}
+    .rg-loading{width:46px;height:46px;position:absolute;top:50%;left:50%;background:#000 url(/Data/BaseData/Style/MyStyle/ajax-loader.gif) no-repeat center center;margin:-23px 0px 0px -23px;z-index:9999;
+    -moz-border-radius: 10px;-webkit-border-radius: 10px;border-radius: 10px;opacity:0.7;}
+
+    /*-----------------------------------------------------------------------------------*/
+    @media screen and (max-width: 640px) {
+    #container{width:100%; height:100%;}
+    #pagecontainer{width:100%; height:100%;}
+    #bottom_nav{ width:100%;}
+    .icons_nav { padding:0 0 0 0; width:100%;}
+    .icons_nav .slides li a{ float:left; margin:0 0 0 4.8%;padding:5% 0 0 0; font-size:12px; color:#FFFFFF; text-align:center; line-height:20px; width:19.2%;}
+    .icons_nav .paginated{ padding:0 0 0 6%; width:94%;}
+    .icons_nav .paginated .slides li a{ float:left; margin:0 0 0 3.6%;padding:5% 0 0 0; font-size:12px; color:#FFFFFF; text-align:center; line-height:20px; width:17.5%;}
+    }
+</style>
+<script src="{tag.DataUrl}/BaseData/Style/jquery.min.js"></script>
+<script src="{tag.DataUrl}/BaseData/Style/MyStyle/jquery.flexslider.js"></script>
+<script type="text/javascript">
+var $ = jQuery.noConflict();
+$(window).load(function() {
+	$('.icons_nav').flexslider({
+	animation: "slide",
+	directionNav: true, <!--Set this to false if you want to remove the arrows navigation of the menu-->
+	animationLoop: false,
+	controlNav: false, 
+	slideshow: false,
+	animationDuration: 300
+	});
+	$('.panels_slider').flexslider({
+	animation: "slide",
+	directionNav: false,
+	controlNav: true, 
+	animationLoop: false,
+	slideToStart: 1,
+	animationDuration: 300, 
+	slideshow: false
+	});
+});
+</script>
+<script type="text/javascript">
+	window.addEventListener("load",function() {
+	setTimeout(function(){
+	window.scrollTo(0, 1);
+	}, 0);
+	});
+</script>
+<script type="text/javascript">
+if((navigator.userAgent.match(/iPhone/i)) || (navigator.userAgent.match(/iPod/i))) {
+    $(window).load(function() {
+       $("body").removeClass("home");
+        if ( ("standalone" in window.navigator) && !window.navigator.standalone    ){
+            $("body").addClass("homeiphone_app");
+        } else {
+            $("body").addClass("homeiphone_full");
+        }
+    });
+}
+</script>
+</head>
+<body class="home">
+<div id="container">
+    <div id="main_panels">
+        <div class="panels_slider">
+        <ul class="slides">
+            <li>
+                <a href="{tag.Link-Nav02}"><img src="{tag.Src-Nav02}" alt="" title="" border="0" /></a>
+            </li>
+            <li>
+                <a href="{tag.Link-Nav00}"><img src="{tag.Src-Nav00}" alt="" title="" border="0" /></a>
+            </li>
+            <li>
+                <a href="{tag.Link-Nav01}"><img src="{tag.Src-Nav01}" alt="" title="" border="0" /></a>
+            </li>            
+        </ul>
+        </div>
+    </div>
+
+    <div id="bottom_nav">
+        <div class="icons_nav">
+                <div class="paginated">
+                        <ul class="slides">
+                            <li>
+                                <a href="{tag.Link-Nav11}" class="icon"><img src="{tag.Src-Nav11}" alt="" title="" border="0" /><span>{tag.Title-Nav11}</span></a>
+                                <a href="{tag.Link-Nav12}" class="icon"><img src="{tag.Src-Nav12}" alt="" title="" border="0" /><span>{tag.Title-Nav12}</span></a>
+                                <a href="{tag.Link-Nav13}" class="icon"><img src="{tag.Src-Nav13}" alt="" title="" border="0" /><span>{tag.Title-Nav13}</span></a>
+                                <a href="{tag.Link-Nav14}" class="icon"><img src="{tag.Src-Nav14}" alt="" title="" border="0" /><span>{tag.Title-Nav14}</span></a>
+                            </li>
+                            <li>
+                                <a href="{tag.Link-Nav21}" class="icon"><img src="{tag.Src-Nav21}" alt="" title="" border="0" /><span>{tag.Title-Nav21}</span></a>
+                                <a href="{tag.Link-Nav22}" class="icon"><img src="{tag.Src-Nav22}" alt="" title="" border="0" /><span>{tag.Title-Nav22}</span></a>
+                                <a href="{tag.Link-Nav23}" class="icon"><img src="{tag.Src-Nav23}" alt="" title="" border="0" /><span>{tag.Title-Nav23}</span></a>
+                                <a href="{tag.Link-Nav24}" class="icon"><img src="{tag.Src-Nav24}" alt="" title="" border="0" /><span>{tag.Title-Nav24}</span></a>
+                            </li>
+                        </ul>
+                </div>
+        </div>
+    </div>
+    
+</div>
+</body>
+</html>

@@ -1,0 +1,15 @@
+﻿[
+{"Id":Nav02,"Desc":"广告图 左 640*960","Title":"标题","Src":"/BaseData/Style/MyStyle/panel_2.jpg","Link":"#"},
+{"Id":Nav00,"Desc":"广告图 中 640*960","Title":"标题","Src":"/BaseData/Style/MyStyle/panel_start.jpg","Link":"#"},
+{"Id":Nav01,"Desc":"广告图 右 640*960","Title":"标题","Src":"/BaseData/Style/MyStyle/panel_1.jpg","Link":"#"},
+
+{"Id":Nav11,"Desc":"第一组第一列 96*96","Title":"标题","Src":"/BaseData/Style/MyStyle/icon_about.png","Link":"#"},
+{"Id":Nav12,"Desc":"第一组第二列 96*96","Title":"标题","Src":"/BaseData/Style/MyStyle/icon_services.png","Link":"#"},
+{"Id":Nav13,"Desc":"第一组第三列 96*96","Title":"标题","Src":"/BaseData/Style/MyStyle/icon_blog.png","Link":"#"},
+{"Id":Nav14,"Desc":"第一组第四列 96*96","Title":"标题","Src":"/BaseData/Style/MyStyle/icon_portfolio.png","Link":"#"},
+
+{"Id":Nav21,"Desc":"第二组第一列 96*96","Title":"标题","Src":"/BaseData/Style/MyStyle/icon_photos.png","Link":"#"},
+{"Id":Nav22,"Desc":"第二组第二列 96*96","Title":"标题","Src":"/BaseData/Style/MyStyle/icon_video.png","Link":"#"},
+{"Id":Nav23,"Desc":"第二组第三列 96*96","Title":"标题","Src":"/BaseData/Style/MyStyle/icon_clients.png","Link":"#"},
+{"Id":Nav24,"Desc":"第二组第四列 96*96","Title":"标题","Src":"/BaseData/Style/MyStyle/icon_contact.png","Link":"#"}
+]

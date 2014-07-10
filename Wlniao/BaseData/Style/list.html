@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html>
+
+<head>
+    <title>{tag.ClassTitle}</title> 
+    <meta content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width" name="viewport" />
+    <meta content="initial-scale=1.0,user-scalable=no,maximum-scale=1" media="(device-height: 568px)" name="viewport" />
+    <meta content="yes" name="apple-mobile-web-app-capable"> 
+    <meta content="black" name="apple-mobile-web-app-status-bar-style"> 
+    <meta content="telephone=no" name="format-detection" />
+    <style>
+        * {margin: 0;padding: 0;}
+        body {display: block;background-color:!important;color: #000;font-family: arial;}input,img {vertical-align: middle;}img {border: 0;}ul, ol, li {list-style: none;}
+        #wlniao {color: #333;font-size: 14px;}
+        #wlniao a {color: #333;text-decoration: none;}
+        #wlniao .fullscreen{margin: auto;background-color: #fff;padding:0 0px;width:100%!important;}   
+        .ui-header .ui-title, .ui-footer .ui-title {min-height: 1.1em;text-align: center;font-size: 16px;display: block;margin: .6em 10% .8em;padding: 0;text-overflow: ellipsis;overflow: hidden;white-space: nowrap;outline: 0 !important;}
+        .ui-bar {border: 1px solid #B3B3B3;background: #EEE;color: #3E3E3E;font-weight: bold; text-shadow: 0 1px 1px  white;
+            background-image: -webkit-gradient(linear, left top, left bottom, from( #F0F0F0 /*{c-bar-background-start}*/), to( #DDD /*{c-bar-background-end}*/));
+            background-image: -webkit-linear-gradient( #F0F0F0 /*{c-bar-background-start}*/, #DDD /*{c-bar-background-end}*/);
+            background-image: -moz-linear-gradient( #F0F0F0 /*{c-bar-background-start}*/, #DDD /*{c-bar-background-end}*/);
+            background-image: -ms-linear-gradient( #F0F0F0 /*{c-bar-background-start}*/, #DDD /*{c-bar-background-end}*/);
+            background-image: -o-linear-gradient( #F0F0F0 /*{c-bar-background-start}*/, #DDD /*{c-bar-background-end}*/);
+            background-image: linear-gradient( #F0F0F0 /*{c-bar-background-start}*/, #DDD /*{c-bar-background-end}*/);
+        }
+        .ui-content {border-width: 0;overflow: visible;overflow-x: hidden;padding: 0px; min-height:68%; padding-top:43px;padding-bottom:16px;}
+        .ui-header{ position:fixed; top:0px; height:40px; width:100%; z-index:99;}
+        .ui-header h1 {display: block;font-size: 2em;-webkit-margin-before: 0.97em;-webkit-margin-after: 0.97em;-webkit-margin-start: 0px;-webkit-margin-end: 0px;font-weight: bold;}
+        
+        .ui-footer{ position:fixed; bottom:0px; height:16px; width:100%; z-index:99;}
+        
+        
+        
+.weiba-list-item{
+	position: relative;
+	display: block;
+	height: 68px;
+	width: 100%;
+	background-image: -webkit-gradient(linear, left top, left bottom, from( #fff ), to( #f1f1f1 ));
+	background-image: -webkit-linear-gradient( #fff , #f1f1f1 );
+	background-image:    -moz-linear-gradient( #fff , #f1f1f1 );
+	background-image:     -ms-linear-gradient( #fff , #f1f1f1 );
+	background-image:      -o-linear-gradient( #fff , #f1f1f1 );
+	background-image:         linear-gradient( #fff , #f1f1f1 );
+	overflow: hidden;
+	border-bottom:1px solid #ccc;
+}
+.weiba-list-item-line{
+	display: table-cell;
+	height: inherit;
+	background-position: center;
+    background-repeat: no-repeat;
+	padding-left: 60px;
+	vertical-align: middle;
+	padding-right: 32px;
+
+}
+.weiba-list-item-image{
+	position: absolute;
+	display: block;
+	left: 6px;
+	width: 48px;
+	height: 48px;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-image: url(icons.png);
+	top:50%;margin-top: -24px;
+}
+.weiba-list-item-icon{
+	position: absolute;
+	right: 12px;
+	top: 50%;
+	margin-top: -9px;
+	width: 18px;
+	height: 18px;
+	background-color: rgba(0,0,0,0.4);
+	background-image: url({tag.DataUrl}/BaseData/Style/icons-bg.png);
+	background-repeat: no-repeat;
+	background-position: -108 -1;
+    border-radius: 9px;
+    -moz-border-radius: 9px;
+	-webkit-border-radius: 9px;
+}
+.weiba-list-item-title{
+	color: #000000;
+	font-size: 16px;
+	white-space: nowrap;
+	zoom: 1;
+}
+
+.weiba-list-item-summary{
+    margin-top: 3px;
+	font-size: 12px;
+	color: #C0C0C0;
+	line-height: 12px;
+	max-height: 23px;
+	overflow: hidden;
+}
+
+    </style>
+</head>
+<body>
+<div class="ui-header ui-bar"><h1 class="ui-title">{tag.ClassTitle}<a href="javascript:history.back(-1);" style="float:left;margin:7px 2px; position:absolute; top:0; left:0; outline:none; height:28px; width:72px; text-align:center; vertical-align:baseline; line-height:28px; color:#333; text-decoration:none; color:#aaa; font-size:14px;">返回</a></h1></div>
+<div class="content" id="wlniao"> 
+    <div class="screen-wrap fullscreen"> 
+        <div class="ui-content">
+            <!--List Start-->
+            <a class="weiba-list-item" href="{new.Url}">
+                <div class="weiba-list-item-image" style="background-image:url({new.Icons})"></div>
+                <div class="weiba-list-item-line">
+                    <div class="weiba-list-item-title">{new.NewsTitle}</div>
+                    <div class="weiba-list-item-summary">{new.UpdateTime}</div>
+                </div>
+                <div class="weiba-list-item-icon icon-arrow-r"></div>
+            </a>
+            <!--List End-->
+        </div>
+    </div> 
+</div>
+<div class="ui-footer ui-bar">
+    <h1 class="ui-title" style=" line-height:1.5em; margin:0px; display:none;">{tag.SiteName}</h1>
+    <h2 style="line-height:1em; font-weight:normal; font-size:10px; color:#999999; text-align:center; margin:3px auto 3px auto;">{tag.CopyRight}</h2>
+</div>
+<script type="text/javascript" src="navjs.aspx"></script>
+</body>
+</html>
