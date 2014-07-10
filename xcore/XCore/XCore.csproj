@@ -1,0 +1,237 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E3AA3F45-47EC-4DE9-922B-576BBC914705}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>System</RootNamespace>
+    <AssemblyName>XCore</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>True</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>False</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+    <DocumentationFile>bin\Debug\XCore.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>True</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DocumentationFile>bin\Release\XCore.XML</DocumentationFile>
+    <GenerateSerializationAssemblies>Auto</GenerateSerializationAssemblies>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MySql.Data">
+      <HintPath>C:\Users\zyg\Desktop\weixin\Weback.SourceCode.140107\dll\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Spring.Aop">
+      <HintPath>..\..\Wlniao\LIB\Spring.Aop.dll</HintPath>
+    </Reference>
+    <Reference Include="Spring.Core">
+      <HintPath>..\..\Wlniao\LIB\Spring.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Spring.Data">
+      <HintPath>..\..\Wlniao\LIB\Spring.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Spring.Data.NHibernate32">
+      <HintPath>..\..\Wlniao\LIB\Spring.Data.NHibernate32.dll</HintPath>
+    </Reference>
+    <Reference Include="Spring.Services">
+      <HintPath>..\..\Wlniao\LIB\Spring.Services.dll</HintPath>
+    </Reference>
+    <Reference Include="Spring.Web">
+      <HintPath>..\..\Wlniao\LIB\Spring.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="cfgHelper.cs" />
+    <Compile Include="cvt.cs" />
+    <Compile Include="DataPage.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ORM\Page\ObjectPage.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Reflection\ReflectionUtil.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Reflection\rft.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Rest.cs" />
+    <Compile Include="IO\XMLHelper.cs" />
+    <Compile Include="IDto.cs" />
+    <Compile Include="IEntity.cs" />
+    <Compile Include="IO\FileEx.cs" />
+    <Compile Include="IO\filesys.cs" />
+    <Compile Include="IO\LinuxPath.cs" />
+    <Compile Include="IO\PathTool.cs" />
+    <Compile Include="IO\WindownsPath.cs" />
+    <Compile Include="IO\Base64.cs" />
+    <Compile Include="IPageList.cs" />
+    <Compile Include="Lang\Lang.cs" />
+    <Compile Include="Lang\LanguageSetting.cs" />
+    <Compile Include="Log\FileLogger.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Log\ILog.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Log\ILogMsg.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Log\LogConfig.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Log\LoggerForDB.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Log\LoggerUtil.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Log\LogLevel.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Log\LogManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Log\LogMessage.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Log\LogMsg.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Log\NullLogger.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PageList.cs" />
+    <Compile Include="PathHelper.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RegPattern.cs" />
+    <Compile Include="Result.cs" />
+    <Compile Include="Serialization\JSON.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Serialization\JsonParser.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Serialization\JsonParser\ArrayJsonParser.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Serialization\JsonParser\CharSource.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Serialization\JsonParser\InitJsonParser.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Serialization\JsonParser\JsonParserBase.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Serialization\JsonParser\JsonParserException.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Serialization\JsonParser\ObjectJsonParser.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Serialization\JsonParser\StringJsonParser.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Serialization\JsonParser\ValueJsonParser.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Serialization\JsonString.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Serialization\SimpleJsonString.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="strUtil.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TemplateEngine\Action.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TemplateEngine\TeConfig.cs" />
+    <Compile Include="TemplateEngine\TempInfo.cs" />
+    <Compile Include="Tree.cs" />
+    <Compile Include="UrlInfo.cs" />
+    <Compile Include="Encryptor.cs" />
+    <Compile Include="Web\Html.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Web\Jobs\IWebJobItem.cs" />
+    <Compile Include="Web\Jobs\WebJob.cs" />
+    <Compile Include="Web\Jobs\WebJobStarter.cs" />
+    <Compile Include="Web\AshxHelper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Web\CurrentRequest.cs" />
+    <Compile Include="System.cs" />
+    <Compile Include="Web\PostAndGet.cs" />
+    <Compile Include="Web\SystemInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Web\HttpImageHandler.cs" />
+    <Compile Include="Util.cs" />
+    <Compile Include="Web\TemplateEngine.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\ForBetter.Common\Shijia.Common.csproj">
+      <Project>{b3f29715-e925-4e56-9248-580f06c3bc11}</Project>
+      <Name>Shijia.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\ForBetter.Dao\Shijia.Dao.csproj">
+      <Project>{dd02dfcf-6013-468a-9e33-788321e1ae53}</Project>
+      <Name>Shijia.Dao</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\ForBetter.Domain\Shijia.Domain.csproj">
+      <Project>{5f0f5964-7932-4c0f-b459-a028a5c0e460}</Project>
+      <Name>Shijia.Domain</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Config\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
