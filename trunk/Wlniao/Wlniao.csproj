@@ -1,0 +1,855 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2FCBDDA6-A8CD-481F-B3C3-06CFFDB5C132}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Wlniao</RootNamespace>
+    <AssemblyName>Wlniao</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode>true</IISExpressUseClassicPipelineMode>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Common.Logging">
+      <HintPath>C:\Users\Administrator\Desktop\WeCompanySite\WeCompanySite\lib\Spring.NET\Common.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Iesi.Collections, Version=1.0.1.0, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Spring_Web_3\Spring_Web_3\bin\Iesi.Collections.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.9.0, Culture=neutral, PublicKeyToken=b32731d11ce58905">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Spring_Web_3\Spring_Web_3\bin\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate, Version=3.2.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Spring_Web_3\Spring_Web_3\bin\NHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="Senparc.Weixin.MP">
+      <HintPath>C:\Users\zyg\Desktop\WeiXinMPSDK-master\Senparc.Weixin.MP.BuildOutPut\Senparc.Weixin.MP.dll</HintPath>
+    </Reference>
+    <Reference Include="Spring.Aop">
+      <HintPath>..\lib\sprint.net\Spring.Aop.dll</HintPath>
+    </Reference>
+    <Reference Include="Spring.Core, Version=1.3.2.40943, Culture=neutral, PublicKeyToken=65e474d141e25e07, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Spring_Web_3\Spring_Web_3\bin\Spring.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Spring.Data, Version=1.3.2.40943, Culture=neutral, PublicKeyToken=65e474d141e25e07, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Spring_Web_3\Spring_Web_3\bin\Spring.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Spring.Data.NHibernate32, Version=1.3.2.40943, Culture=neutral, PublicKeyToken=65e474d141e25e07, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Spring_Web_3\Spring_Web_3\bin\Spring.Data.NHibernate32.dll</HintPath>
+    </Reference>
+    <Reference Include="Spring.Web">
+      <HintPath>..\..\Spring_Web_3\Spring_Web_3\bin\Spring.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="appbox.aspx" />
+    <Content Include="BaseData\Banner\1\default.jpg" />
+    <Content Include="BaseData\Banner\1\swipeslide.css" />
+    <Content Include="BaseData\Banner\1\swipeslide.js" />
+    <Content Include="BaseData\Style\defaultlogo.png" />
+    <Content Include="BaseData\Style\Default\index.html" />
+    <Content Include="BaseData\Style\icons-bg.png" />
+    <Content Include="BaseData\Style\icons.png" />
+    <Content Include="BaseData\Style\jquery.min.js" />
+    <Content Include="BaseData\Style\list.html" />
+    <Content Include="BaseData\Style\Mobifreaks\index.html" />
+    <Content Include="BaseData\Style\Mobifreaks\logo.png" />
+    <Content Include="BaseData\Style\Mobifreaks\Thumb.png" />
+    <Content Include="BaseData\Style\MyStyle\bg_control_nav.png" />
+    <Content Include="BaseData\Style\MyStyle\icon_about.png" />
+    <Content Include="BaseData\Style\MyStyle\icon_blog.png" />
+    <Content Include="BaseData\Style\MyStyle\icon_clients.png" />
+    <Content Include="BaseData\Style\MyStyle\icon_contact.png" />
+    <Content Include="BaseData\Style\MyStyle\icon_photos.png" />
+    <Content Include="BaseData\Style\MyStyle\icon_portfolio.png" />
+    <Content Include="BaseData\Style\MyStyle\icon_services.png" />
+    <Content Include="BaseData\Style\MyStyle\icon_video.png" />
+    <Content Include="BaseData\Style\MyStyle\index.html" />
+    <Content Include="BaseData\Style\MyStyle\jquery.flexslider.js" />
+    <Content Include="BaseData\Style\MyStyle\nav_bg.png" />
+    <Content Include="BaseData\Style\MyStyle\next.png" />
+    <Content Include="BaseData\Style\MyStyle\panel_1.jpg" />
+    <Content Include="BaseData\Style\MyStyle\panel_2.jpg" />
+    <Content Include="BaseData\Style\MyStyle\panel_start.jpg" />
+    <Content Include="BaseData\Style\MyStyle\prev.png" />
+    <Content Include="BaseData\Style\MyStyle\Thumb.png" />
+    <Content Include="BaseData\Style\nav1.png" />
+    <Content Include="BaseData\Style\nav2.png" />
+    <Content Include="BaseData\Style\news.html" />
+    <Content Include="BaseData\Style\nopic.png" />
+    <Content Include="BaseData\Style\page.html" />
+    <Content Include="BaseData\Style\WlniaoNew\banner.jpg" />
+    <Content Include="BaseData\Style\WlniaoNew\index.html" />
+    <Content Include="BaseData\Style\WlniaoNew\Thumb.png" />
+    <Content Include="BaseData\Style\Wlniao\banner.jpg" />
+    <Content Include="BaseData\Style\Wlniao\index.html" />
+    <Content Include="BaseData\Style\Wlniao\Thumb.png" />
+    <Content Include="BaseData\Style\YouBase\ajax.gif" />
+    <Content Include="BaseData\Style\YouBase\banner.jpg" />
+    <Content Include="BaseData\Style\YouBase\icons-18-white.png" />
+    <Content Include="BaseData\Style\YouBase\icons.png" />
+    <Content Include="BaseData\Style\YouBase\index.html" />
+    <Content Include="BaseData\Style\YouBase\jquery-2.0.3.min.js" />
+    <Content Include="BaseData\Style\YouBase\jquery.mobile.events.min.js" />
+    <Content Include="BaseData\Style\YouBase\pure.min.js" />
+    <Content Include="BaseData\Style\YouBase\Thumb.png" />
+    <Content Include="BaseData\Style\YouBase\ui.css" />
+    <Content Include="BaseData\Style\YouBase\weback.js" />
+    <Content Include="BaseData\Style\YouBase\weback.ui.js" />
+    <Content Include="BaseData\Style\zepto.min.js" />
+    <Content Include="change.aspx" />
+    <Content Include="cms.aspx" />
+    <Content Include="cms1.aspx" />
+    <EmbeddedResource Include="Config\Controllers.xml" />
+    <Content Include="favicon.ico" />
+    <Content Include="Global.asax" />
+    <Content Include="LIB\AspNetPager.dll" />
+    <Content Include="LIB\Common.Logging.dll" />
+    <Content Include="LIB\GotDotNet.ApplicationBlocks.Data.dll" />
+    <Content Include="LIB\Iesi.Collections.dll" />
+    <Content Include="LIB\log4net.dll" />
+    <Content Include="LIB\NHibernate.dll" />
+    <Content Include="LIB\Senparc.Weixin.MP.dll" />
+    <Content Include="LIB\Senparc.Weixin.MP.xml" />
+    <Content Include="LIB\Spring.Aop.dll" />
+    <Content Include="LIB\Spring.Core.dll" />
+    <Content Include="LIB\Spring.Data.dll" />
+    <Content Include="LIB\Spring.Data.NHibernate32.dll" />
+    <Content Include="LIB\Spring.Messaging.dll" />
+    <Content Include="LIB\Spring.Services.dll" />
+    <Content Include="LIB\Spring.Web.dll" />
+    <Content Include="mobile.aspx" />
+    <Content Include="static\icons\logo\fm.png" />
+    <Content Include="static\icons\user.png" />
+    <Content Include="static\img\empty.jpg" />
+    <Content Include="static\img\icon-edit.png" />
+    <Content Include="static\img\link_arrow_right_blue1913d0.png" />
+    <Content Include="static\img\qqonline.gif" />
+    <Content Include="static\wlniao-style.css" />
+    <Content Include="Sys\cms\cmsclass.aspx" />
+    <Content Include="Sys\cms\nav.aspx" />
+    <Content Include="Sys\cms\navset.aspx" />
+    <Content Include="Sys\cms\news.aspx" />
+    <Content Include="Sys\cms\site.aspx" />
+    <Content Include="Sys\cms\sitejs.aspx" />
+    <Content Include="Sys\cms\site_banner.aspx" />
+    <Content Include="Sys\cms\site_color.aspx" />
+    <Content Include="Sys\cms\site_copyright.aspx" />
+    <Content Include="Sys\cms\site_logo.aspx" />
+    <Content Include="Sys\cms\site_logoup.aspx" />
+    <Content Include="Sys\cms\style.aspx" />
+    <Content Include="Sys\cms\styleset.aspx" />
+    <Content Include="Sys\Init.aspx" />
+    <Content Include="login.aspx" />
+    <Content Include="Sys\Create.aspx" />
+    <Content Include="logout.aspx" />
+    <Content Include="Sys\ChangePwdSuccess.aspx" />
+    <Content Include="default.aspx" />
+    <Content Include="notice.aspx" />
+    <Content Include="qrcode.jpg" />
+    <Content Include="Rest\WX\SetToken.aspx" />
+    <Content Include="Rest\WX\SetNameAndToken.aspx" />
+    <Content Include="Rest\WX\SetAppIdAndSecret.aspx" />
+    <Content Include="static\bootstrap\css\bootstrap-spacelab.css" />
+    <Content Include="static\common.js" />
+    <Content Include="static\css3frame\css\style.css" />
+    <Content Include="static\css3frame\fonts\icomoon.dev.svg" />
+    <Content Include="static\css3frame\fonts\icomoon.svg" />
+    <Content Include="static\emotions.js" />
+    <Content Include="static\html-helper.js" />
+    <Content Include="static\icons\gjzhf.png" />
+    <Content Include="static\icons\nav\home.png" />
+    <Content Include="static\icons\nav\local.png" />
+    <Content Include="static\icons\nav\menu.png" />
+    <Content Include="static\icons\nav\news.png" />
+    <Content Include="static\icons\nav\plus.png" />
+    <Content Include="static\icons\nav\qq.png" />
+    <Content Include="static\icons\nav\tel.png" />
+    <Content Include="static\icons\scgz.png" />
+    <Content Include="static\icons\setting.png" />
+    <Content Include="static\icons\app.png" />
+    <Content Include="static\icons\wgw.png" />
+    <Content Include="static\icons\wwz.png" />
+    <Content Include="static\icons\zdycd.png" />
+    <Content Include="static\img\tree\tree-icons.png" />
+    <Content Include="static\img\tree\treeview-default.png" />
+    <Content Include="static\img\bg-form-txt.gif" />
+    <Content Include="static\img\home_bg.png" />
+    <Content Include="static\img\iconEmotion.png" />
+    <Content Include="static\img\p\create_b.gif" />
+    <Content Include="static\img\p\create_f.gif" />
+    <Content Include="static\img\p\login.png" />
+    <Content Include="static\img\p\login_b.gif" />
+    <Content Include="static\img\p\login_f.gif" />
+    <Content Include="static\jquery-ui.min.js" />
+    <Content Include="static\jquery.jmp3.js" />
+    <Content Include="static\jquery.json-2.4.min.js" />
+    <Content Include="static\maopaotips.css" />
+    <Content Include="static\maopaotips.js" />
+    <Content Include="static\logo.png" />
+    <Content Include="static\logo20.png" />
+    <Content Include="static\om-apusic.css" />
+    <Content Include="static\operamasks-ui-all.min.js" />
+    <Content Include="static\singlemp3player.swf" />
+    <Content Include="static\swfobject.js" />
+    <Content Include="static\tips\gb_tip_layer.png" />
+    <Content Include="static\tips\gb_tip_layer_ie6.png" />
+    <Content Include="static\tips\loading.gif" />
+    <Content Include="static\tips\style.css" />
+    <Content Include="static\tips\tips.js" />
+    <Content Include="static\ueditor\dialogs\attachment\attachment.css" />
+    <Content Include="static\ueditor\dialogs\attachment\attachment.html" />
+    <Content Include="static\ueditor\dialogs\attachment\callbacks.js" />
+    <Content Include="static\ueditor\dialogs\attachment\fileTypeImages\icon_chm.gif" />
+    <Content Include="static\ueditor\dialogs\attachment\fileTypeImages\icon_default.png" />
+    <Content Include="static\ueditor\dialogs\attachment\fileTypeImages\icon_doc.gif" />
+    <Content Include="static\ueditor\dialogs\attachment\fileTypeImages\icon_exe.gif" />
+    <Content Include="static\ueditor\dialogs\attachment\fileTypeImages\icon_mp3.gif" />
+    <Content Include="static\ueditor\dialogs\attachment\fileTypeImages\icon_mv.gif" />
+    <Content Include="static\ueditor\dialogs\attachment\fileTypeImages\icon_pdf.gif" />
+    <Content Include="static\ueditor\dialogs\attachment\fileTypeImages\icon_ppt.gif" />
+    <Content Include="static\ueditor\dialogs\attachment\fileTypeImages\icon_psd.gif" />
+    <Content Include="static\ueditor\dialogs\attachment\fileTypeImages\icon_rar.gif" />
+    <Content Include="static\ueditor\dialogs\attachment\fileTypeImages\icon_txt.gif" />
+    <Content Include="static\ueditor\dialogs\attachment\fileTypeImages\icon_xls.gif" />
+    <Content Include="static\ueditor\dialogs\attachment\fileTypeMaps.js" />
+    <Content Include="static\ueditor\dialogs\emotion\emotion.css" />
+    <Content Include="static\ueditor\dialogs\emotion\emotion.html" />
+    <Content Include="static\ueditor\dialogs\emotion\emotion.js" />
+    <Content Include="static\ueditor\dialogs\emotion\images\0.gif" />
+    <Content Include="static\ueditor\dialogs\emotion\images\bface.gif" />
+    <Content Include="static\ueditor\dialogs\emotion\images\cface.gif" />
+    <Content Include="static\ueditor\dialogs\emotion\images\fface.gif" />
+    <Content Include="static\ueditor\dialogs\emotion\images\jxface2.gif" />
+    <Content Include="static\ueditor\dialogs\emotion\images\neweditor-tab-bg.png" />
+    <Content Include="static\ueditor\dialogs\emotion\images\tface.gif" />
+    <Content Include="static\ueditor\dialogs\emotion\images\wface.gif" />
+    <Content Include="static\ueditor\dialogs\emotion\images\yface.gif" />
+    <Content Include="static\ueditor\dialogs\image\image.css" />
+    <Content Include="static\ueditor\dialogs\image\image.html" />
+    <Content Include="static\ueditor\dialogs\image\image.js" />
+    <Content Include="static\ueditor\dialogs\image\images\center_focus.jpg" />
+    <Content Include="static\ueditor\dialogs\image\images\left_focus.jpg" />
+    <Content Include="static\ueditor\dialogs\image\images\none_focus.jpg" />
+    <Content Include="static\ueditor\dialogs\image\images\right_focus.jpg" />
+    <Content Include="static\ueditor\dialogs\image\imageUploader.swf" />
+    <Content Include="static\ueditor\dialogs\internal.js" />
+    <Content Include="static\ueditor\dialogs\link\link.html" />
+    <Content Include="static\ueditor\dialogs\music\music.css" />
+    <Content Include="static\ueditor\dialogs\music\music.html" />
+    <Content Include="static\ueditor\dialogs\music\music.js" />
+    <Content Include="static\ueditor\dialogs\searchreplace\searchreplace.html" />
+    <Content Include="static\ueditor\dialogs\searchreplace\searchreplace.js" />
+    <Content Include="static\ueditor\dialogs\tangram.js" />
+    <Content Include="static\ueditor\dialogs\template\config.js" />
+    <Content Include="static\ueditor\dialogs\template\images\bg.gif" />
+    <Content Include="static\ueditor\dialogs\template\images\pre0.png" />
+    <Content Include="static\ueditor\dialogs\template\images\pre1.png" />
+    <Content Include="static\ueditor\dialogs\template\images\pre2.png" />
+    <Content Include="static\ueditor\dialogs\template\images\pre3.png" />
+    <Content Include="static\ueditor\dialogs\template\images\pre4.png" />
+    <Content Include="static\ueditor\dialogs\template\template.css" />
+    <Content Include="static\ueditor\dialogs\template\template.html" />
+    <Content Include="static\ueditor\dialogs\template\template.js" />
+    <Content Include="static\ueditor\editor_all.js" />
+    <Content Include="static\ueditor\editor_all.min.js" />
+    <Content Include="static\ueditor\editor_config.js" />
+    <Content Include="static\ueditor\editor_parse.js" />
+    <Content Include="static\ueditor\lang\zh-cn\images\copy.png" />
+    <Content Include="static\ueditor\lang\zh-cn\images\imglabel.png" />
+    <Content Include="static\ueditor\lang\zh-cn\images\localimage.png" />
+    <Content Include="static\ueditor\lang\zh-cn\images\music.png" />
+    <Content Include="static\ueditor\lang\zh-cn\images\upload.png" />
+    <Content Include="static\ueditor\lang\zh-cn\zh-cn.js" />
+    <Content Include="static\ueditor\themes\default\css\ueditor.css" />
+    <Content Include="static\ueditor\themes\default\dialogbase.css" />
+    <Content Include="static\ueditor\themes\default\images\anchor.gif" />
+    <Content Include="static\ueditor\themes\default\images\arrow.png" />
+    <Content Include="static\ueditor\themes\default\images\arrow_down.png" />
+    <Content Include="static\ueditor\themes\default\images\arrow_up.png" />
+    <Content Include="static\ueditor\themes\default\images\button-bg.gif" />
+    <Content Include="static\ueditor\themes\default\images\cancelbutton.gif" />
+    <Content Include="static\ueditor\themes\default\images\cursor_h.gif" />
+    <Content Include="static\ueditor\themes\default\images\cursor_h.png" />
+    <Content Include="static\ueditor\themes\default\images\cursor_v.gif" />
+    <Content Include="static\ueditor\themes\default\images\cursor_v.png" />
+    <Content Include="static\ueditor\themes\default\images\dialog-title-bg.png" />
+    <Content Include="static\ueditor\themes\default\images\filescan.png" />
+    <Content Include="static\ueditor\themes\default\images\highlighted.gif" />
+    <Content Include="static\ueditor\themes\default\images\icons-all.gif" />
+    <Content Include="static\ueditor\themes\default\images\icons.gif" />
+    <Content Include="static\ueditor\themes\default\images\icons.png" />
+    <Content Include="static\ueditor\themes\default\images\lock.gif" />
+    <Content Include="static\ueditor\themes\default\images\neweditor-tab-bg.png" />
+    <Content Include="static\ueditor\themes\default\images\pagebreak.gif" />
+    <Content Include="static\ueditor\themes\default\images\scale.png" />
+    <Content Include="static\ueditor\themes\default\images\spacer.gif" />
+    <Content Include="static\ueditor\themes\default\images\sparator_v.png" />
+    <Content Include="static\ueditor\themes\default\images\table-cell-align.png" />
+    <Content Include="static\ueditor\themes\default\images\tangram-colorpicker.png" />
+    <Content Include="static\ueditor\themes\default\images\toolbar_bg.png" />
+    <Content Include="static\ueditor\themes\default\images\unhighlighted.gif" />
+    <Content Include="static\ueditor\themes\default\images\upload.png" />
+    <Content Include="static\ueditor\themes\default\images\videologo.gif" />
+    <Content Include="static\ueditor\themes\default\images\word.gif" />
+    <Content Include="static\ueditor\themes\default\images\wordpaste.png" />
+    <Content Include="static\ueditor\themes\iframe.css" />
+    <Content Include="static\ueditor\third-party\codemirror\codemirror.css" />
+    <Content Include="static\ueditor\third-party\codemirror\codemirror.js" />
+    <Content Include="static\ueditor\third-party\swfupload\fileprogress.js" />
+    <Content Include="static\ueditor\third-party\swfupload\swfupload.cookies.js" />
+    <Content Include="static\ueditor\third-party\swfupload\swfupload.js" />
+    <Content Include="static\ueditor\third-party\swfupload\swfupload.proxy.js" />
+    <Content Include="static\ueditor\third-party\swfupload\swfupload.queue.js" />
+    <Content Include="static\ueditor\third-party\swfupload\swfupload.speed.js" />
+    <Content Include="static\ueditor\third-party\swfupload\swfupload.swf" />
+    <Content Include="static\ueditor\third-party\swfupload\swfupload_fp9.swf" />
+    <Content Include="static\ueditor\third-party\SyntaxHighlighter\shCore.js" />
+    <Content Include="static\ueditor\third-party\SyntaxHighlighter\shCoreDefault.css" />
+    <Content Include="static\uploadify\Change Log.txt" />
+    <Content Include="static\uploadify\jquery.uploadify.js" />
+    <Content Include="static\uploadify\jquery.uploadify.min.js" />
+    <Content Include="static\uploadify\license.txt" />
+    <Content Include="static\uploadify\uploadify-cancel.png" />
+    <Content Include="static\uploadify\uploadify.css" />
+    <Content Include="static\uploadify\uploadify.swf" />
+    <Content Include="static\uploadify\__MACOSX\._Change Log.txt" />
+    <Content Include="static\uploadify\__MACOSX\._uploadify.swf" />
+    <Content Include="static\wln.js" />
+    <Content Include="static\zclip\jquery.zclip.min.js" />
+    <Content Include="static\zclip\ZeroClipboard.swf" />
+    <Content Include="Sys\HandleRuleList.aspx" />
+    <Content Include="Sys\HandleRuleForm.aspx" />
+    <Content Include="Sys\HandleRuleRest.aspx" />
+    <Content Include="Sys\HandleRuleSet.aspx" />
+    <Content Include="Sys\MPUserInfo.aspx" />
+    <Content Include="Sys\SendMsg.aspx" />
+    <Content Include="upload.aspx" />
+    <Content Include="Sys\MenuInfo.aspx" />
+    <Content Include="Sys\Setting.aspx" />
+    <Content Include="topbar.aspx" />
+    <Content Include="Sys\ChangePwd.aspx" />
+    <Content Include="static\bootstrap\css\bootstrap-responsive.css" />
+    <Content Include="static\bootstrap\css\bootstrap-responsive.min.css" />
+    <Content Include="static\bootstrap\css\bootstrap.css" />
+    <Content Include="static\bootstrap\css\bootstrap.min.css" />
+    <Content Include="static\bootstrap\img\glyphicons-halflings-white.png" />
+    <Content Include="static\bootstrap\img\glyphicons-halflings.png" />
+    <Content Include="static\bootstrap\js\bootstrap.js" />
+    <Content Include="static\bootstrap\js\bootstrap.min.js" />
+    <Content Include="static\jquery.js" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="wxapi.aspx" />
+    <Content Include="Sys\ResponseMsg.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="appbox.aspx.cs">
+      <DependentUpon>appbox.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="appbox.aspx.designer.cs">
+      <DependentUpon>appbox.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="change.aspx.cs">
+      <DependentUpon>change.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="change.aspx.designer.cs">
+      <DependentUpon>change.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cms.aspx.cs">
+      <DependentUpon>cms.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms.aspx.designer.cs">
+      <DependentUpon>cms.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cms1.aspx.cs">
+      <DependentUpon>cms1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms1.aspx.designer.cs">
+      <DependentUpon>cms1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="mobile.aspx.cs">
+      <DependentUpon>mobile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="mobile.aspx.designer.cs">
+      <DependentUpon>mobile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\MiniSite.cs" />
+    <Compile Include="Properties\CmsClass.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="imageUp.ashx.cs">
+      <DependentUpon>imageUp.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Hub.cs" />
+    <Compile Include="Properties\HubMethod\Default.cs" />
+    <Compile Include="Properties\HubMethod\MsgLog.cs" />
+    <Compile Include="Properties\Oss.cs" />
+    <Compile Include="Sys\cms\cmsclass.aspx.cs">
+      <DependentUpon>cmsclass.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sys\cms\cmsclass.aspx.designer.cs">
+      <DependentUpon>cmsclass.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sys\cms\nav.aspx.cs">
+      <DependentUpon>nav.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sys\cms\nav.aspx.designer.cs">
+      <DependentUpon>nav.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sys\cms\navset.aspx.cs">
+      <DependentUpon>navset.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sys\cms\navset.aspx.designer.cs">
+      <DependentUpon>navset.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sys\cms\news.aspx.cs">
+      <DependentUpon>news.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sys\cms\news.aspx.designer.cs">
+      <DependentUpon>news.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sys\cms\site.aspx.cs">
+      <DependentUpon>site.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sys\cms\site.aspx.designer.cs">
+      <DependentUpon>site.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sys\cms\sitejs.aspx.cs">
+      <DependentUpon>sitejs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sys\cms\sitejs.aspx.designer.cs">
+      <DependentUpon>sitejs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sys\cms\site_banner.aspx.cs">
+      <DependentUpon>site_banner.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sys\cms\site_banner.aspx.designer.cs">
+      <DependentUpon>site_banner.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sys\cms\site_color.aspx.cs">
+      <DependentUpon>site_color.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sys\cms\site_color.aspx.designer.cs">
+      <DependentUpon>site_color.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sys\cms\site_copyright.aspx.cs">
+      <DependentUpon>site_copyright.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sys\cms\site_copyright.aspx.designer.cs">
+      <DependentUpon>site_copyright.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sys\cms\site_logo.aspx.cs">
+      <DependentUpon>site_logo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sys\cms\site_logo.aspx.designer.cs">
+      <DependentUpon>site_logo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sys\cms\site_logoup.aspx.cs">
+      <DependentUpon>site_logoup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sys\cms\site_logoup.aspx.designer.cs">
+      <DependentUpon>site_logoup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sys\cms\style.aspx.cs">
+      <DependentUpon>style.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sys\cms\style.aspx.designer.cs">
+      <DependentUpon>style.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sys\cms\styleset.aspx.cs">
+      <DependentUpon>styleset.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sys\cms\styleset.aspx.designer.cs">
+      <DependentUpon>styleset.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sys\Init.aspx.cs">
+      <DependentUpon>Init.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sys\Init.aspx.designer.cs">
+      <DependentUpon>Init.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="login.aspx.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="login.aspx.designer.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sys\Create.aspx.cs">
+      <DependentUpon>Create.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sys\Create.aspx.designer.cs">
+      <DependentUpon>Create.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="logout.aspx.cs">
+      <DependentUpon>logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="logout.aspx.designer.cs">
+      <DependentUpon>logout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sys\ChangePwdSuccess.aspx.cs">
+      <DependentUpon>ChangePwdSuccess.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sys\ChangePwdSuccess.aspx.designer.cs">
+      <DependentUpon>ChangePwdSuccess.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="default.aspx.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="default.aspx.designer.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="notice.aspx.cs">
+      <DependentUpon>notice.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="notice.aspx.designer.cs">
+      <DependentUpon>notice.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\MP.cs" />
+    <Compile Include="Properties\Uploader.cs" />
+    <Compile Include="Rest\WX\SetToken.aspx.cs">
+      <DependentUpon>SetToken.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rest\WX\SetToken.aspx.designer.cs">
+      <DependentUpon>SetToken.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rest\WX\SetNameAndToken.aspx.cs">
+      <DependentUpon>SetNameAndToken.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rest\WX\SetNameAndToken.aspx.designer.cs">
+      <DependentUpon>SetNameAndToken.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rest\WX\SetAppIdAndSecret.aspx.cs">
+      <DependentUpon>SetAppIdAndSecret.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rest\WX\SetAppIdAndSecret.aspx.designer.cs">
+      <DependentUpon>SetAppIdAndSecret.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="static\ueditor\net\fileUp.ashx.cs">
+      <DependentUpon>fileUp.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="static\ueditor\net\imageUp.ashx.cs">
+      <DependentUpon>imageUp.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Sys\HandleRuleList.aspx.cs">
+      <DependentUpon>HandleRuleList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sys\HandleRuleList.aspx.designer.cs">
+      <DependentUpon>HandleRuleList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sys\HandleRuleForm.aspx.cs">
+      <DependentUpon>HandleRuleForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sys\HandleRuleForm.aspx.designer.cs">
+      <DependentUpon>HandleRuleForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sys\HandleRuleRest.aspx.cs">
+      <DependentUpon>HandleRuleRest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sys\HandleRuleRest.aspx.designer.cs">
+      <DependentUpon>HandleRuleRest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sys\HandleRuleSet.aspx.cs">
+      <DependentUpon>HandleRuleSet.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sys\HandleRuleSet.aspx.designer.cs">
+      <DependentUpon>HandleRuleSet.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sys\MPUserInfo.aspx.cs">
+      <DependentUpon>MPUserInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sys\MPUserInfo.aspx.designer.cs">
+      <DependentUpon>MPUserInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sys\SendMsg.aspx.cs">
+      <DependentUpon>SendMsg.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sys\SendMsg.aspx.designer.cs">
+      <DependentUpon>SendMsg.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TemplateEngine\PageBase.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="upload.aspx.cs">
+      <DependentUpon>upload.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="upload.aspx.designer.cs">
+      <DependentUpon>upload.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sys\MenuInfo.aspx.cs">
+      <DependentUpon>MenuInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sys\MenuInfo.aspx.designer.cs">
+      <DependentUpon>MenuInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sys\Setting.aspx.cs">
+      <DependentUpon>Setting.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sys\Setting.aspx.designer.cs">
+      <DependentUpon>Setting.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="topbar.aspx.cs">
+      <DependentUpon>topbar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="topbar.aspx.designer.cs">
+      <DependentUpon>topbar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sys\ChangePwd.aspx.cs">
+      <DependentUpon>ChangePwd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sys\ChangePwd.aspx.designer.cs">
+      <DependentUpon>ChangePwd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Page.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="wxapi.aspx.cs">
+      <DependentUpon>wxapi.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="wxapi.aspx.designer.cs">
+      <DependentUpon>wxapi.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sys\ResponseMsg.aspx.cs">
+      <DependentUpon>ResponseMsg.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sys\ResponseMsg.aspx.designer.cs">
+      <DependentUpon>ResponseMsg.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sys\WeixinAuth.aspx.cs">
+      <DependentUpon>WeixinAuth.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sys\WeixinAuth.aspx.designer.cs">
+      <DependentUpon>WeixinAuth.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sys\MenuSet.aspx.cs">
+      <DependentUpon>MenuSet.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sys\MenuSet.aspx.designer.cs">
+      <DependentUpon>MenuSet.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sys\MenuAjax.aspx.cs">
+      <DependentUpon>MenuAjax.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sys\MenuAjax.aspx.designer.cs">
+      <DependentUpon>MenuAjax.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="log\" />
+    <Folder Include="xcenter\log\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="imageUp.ashx" />
+    <Content Include="static\css3frame\fonts\icomoon.eot" />
+    <Content Include="static\css3frame\fonts\icomoon.ttf" />
+    <Content Include="static\css3frame\fonts\icomoon.woff" />
+    <Content Include="Sys\WeixinAuth.aspx" />
+    <Content Include="Sys\MenuSet.aspx" />
+    <Content Include="Sys\MenuAjax.aspx" />
+    <Content Include="xcenter\conf\log.config" />
+    <Content Include="xcenter\conf\template.config" />
+    <Content Include="xcenter\lang\zh-cn\core.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="static\ueditor\net\fileUp.ashx" />
+    <Content Include="static\ueditor\net\getContent.ashx" />
+    <Content Include="static\ueditor\net\getMovie.ashx" />
+    <Content Include="static\ueditor\net\getRemoteImage.ashx" />
+    <Content Include="static\ueditor\net\imageManager.ashx" />
+    <Content Include="static\ueditor\net\imageUp.ashx" />
+    <Content Include="static\ueditor\net\scrawlUp.ashx" />
+    <Content Include="static\ueditor\net\Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="xcenter\conf\orm.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ForBetter.Common\Shijia.Common.csproj">
+      <Project>{b3f29715-e925-4e56-9248-580f06c3bc11}</Project>
+      <Name>Shijia.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ForBetter.Dao\Shijia.Dao.csproj">
+      <Project>{dd02dfcf-6013-468a-9e33-788321e1ae53}</Project>
+      <Name>Shijia.Dao</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ForBetter.Domain\Shijia.Domain.csproj">
+      <Project>{5f0f5964-7932-4c0f-b459-a028a5c0e460}</Project>
+      <Name>Shijia.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ForBetter.Service\Shijia.Service.csproj">
+      <Project>{d333c668-d15b-40db-b37a-8c3a420d340e}</Project>
+      <Name>Shijia.Service</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Shijia.Process\Shijia.Process.csproj">
+      <Project>{a30f6c7c-174e-4811-9099-9bf0bb538d09}</Project>
+      <Name>Shijia.Process</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\xcore\XCore\XCore.csproj">
+      <Project>{e3aa3f45-47ec-4de9-922b-576bbc914705}</Project>
+      <Name>XCore</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="weixin.bak" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Log4net.config" />
+    <Content Include="BaseData\Data\Style.index" />
+    <Content Include="BaseData\Style\Default\Config.data" />
+    <Content Include="BaseData\Style\Default\ImgLink.data" />
+    <Content Include="BaseData\Style\Mobifreaks\Config.data" />
+    <Content Include="BaseData\Style\Mobifreaks\ImgLink.data" />
+    <Content Include="BaseData\Style\MyStyle\Config.data" />
+    <Content Include="BaseData\Style\MyStyle\ImgLink.data" />
+    <Content Include="BaseData\Style\WlniaoNew\Config.data" />
+    <Content Include="BaseData\Style\WlniaoNew\ImgLink.data" />
+    <Content Include="BaseData\Style\Wlniao\Config.data" />
+    <Content Include="BaseData\Style\Wlniao\ImgLink.data" />
+    <Content Include="BaseData\Style\YouBase\Config.data" />
+    <Content Include="BaseData\Style\YouBase\ImgLink.data" />
+    <None Include="Properties\PublishProfiles\weixin.pubxml" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>1037</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:1037/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>http://localhost/</CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
