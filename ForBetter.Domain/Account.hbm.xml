@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Shijia.Domain">
+    <class name="Shijia.Domain.Account" table="[Account]">
+      <cache usage="read-write"/>
+      <id name="Id" type="int"  unsaved-value="0">
+        <column name="Id" index="PK_Account"/>
+        <generator class="identity" />
+      </id>
+      <property name="AccountUserName" column="AccountUserName" type="string"  />
+      <property name="AccountPassword" column="AccountPassword" type="string"  />
+      <property name="AccountJoinTime" column="AccountJoinTime" type="DateTime"  />
+      <property name="AccountLastLogin" column="AccountLastLogin" type="DateTime"  />
+      <property name="IsStop" column="IsStop" type="int"  />
+      <property name="AgentId" column="AgentId" type="int"  />
+      <property name="AgentMemo" column="AgentMemo" type="string"  />
+      <property name="AccountEmail" column="AccountEmail" type="string"  />
+      <property name="AccountMobile" column="AccountMobile" type="string"  />
+
+    </class>
+  <!--<class name="Shijia.Domain.Customer" table="Sales.Customers" lazy="false" >
+    
+    <id name="Id" unsaved-value="null" column="custid" type="int" >
+      <generator class="identity" />
+    </id>
+    
+    <property name="CompanyName" column="CompanyName"  length="40"  not-null="true" index="CompanyName"/>
+    <property name="ContactName" length="30" not-null="false"/>
+    <property name="ContactTitle" length="30"  not-null="false"/>
+    <property name="Address" length="60"  not-null="false"/>
+    <property name="City" length="15"  not-null="false" index="City"/>
+    <property name="Region" length="15" not-null="false" index="Region"/>
+    <property name="PostalCode" length="10"  not-null="false" index="PostalCode"/>
+    <property name="Country" type="String" length="15"  not-null="false"/>
+    <property name="Phone" length="24"  not-null="false"/>
+    <property name="Fax" length="24"  not-null="false"/>
+  </class>-->
+</hibernate-mapping>
