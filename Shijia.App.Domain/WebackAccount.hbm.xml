@@ -1,0 +1,15 @@
+﻿<?xml version="1.0"  encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Shijia.App.Domain" namespace="Shijia.App.Domain">
+  <class name="Shijia.App.Domain.WebackAccount" table="WebackAccount">
+    <id name="ID" column="ID" type="decimal" unsaved-value="0">
+      <column name="ID" index="PK_WebackAccount"/>
+      <generator class="identity" />
+    </id>
+    <property name="AppUserId" column="AppUserId" type="string"  />
+    <property name="MPToken" column="MPToken" type="string"  />
+    <property name="AppToken" column="AppToken" type="string"  />
+    <property name="WebackUrl" column="WebackUrl" type="string"  />
+    <property name="Period" column="Period" type="string"  />
+
+  </class>
+</hibernate-mapping>
