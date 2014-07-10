@@ -1,0 +1,143 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D333C668-D15B-40DB-B37A-8C3A420D340E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Shijia.Service</RootNamespace>
+    <AssemblyName>Shijia.Service</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Spring.Aop, Version=1.3.1.40711, Culture=neutral, PublicKeyToken=65e474d141e25e07, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Wlniao\LIB\Spring.Aop.dll</HintPath>
+    </Reference>
+    <Reference Include="Spring.Core, Version=1.3.1.40711, Culture=neutral, PublicKeyToken=65e474d141e25e07, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Wlniao\LIB\Spring.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Spring.Data, Version=1.3.1.40711, Culture=neutral, PublicKeyToken=65e474d141e25e07, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Wlniao\LIB\Spring.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Spring.Data.NHibernate32, Version=1.3.2.40943, Culture=neutral, PublicKeyToken=65e474d141e25e07, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Wlniao\LIB\Spring.Data.NHibernate32.dll</HintPath>
+    </Reference>
+    <Reference Include="Spring.Services, Version=1.3.1.40711, Culture=neutral, PublicKeyToken=65e474d141e25e07, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Wlniao\LIB\Spring.Services.dll</HintPath>
+    </Reference>
+    <Reference Include="Spring.Web, Version=1.3.1.40711, Culture=neutral, PublicKeyToken=65e474d141e25e07, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Wlniao\LIB\Spring.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AccountService.cs" />
+    <Compile Include="CmsClass.cs" />
+    <Compile Include="CmsNews.cs" />
+    <Compile Include="GenericManagerBase`1.cs" />
+    <Compile Include="IAccountService.cs" />
+    <Compile Include="IGenericManager`1.cs" />
+    <Compile Include="MiniSite.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="HandleRuleService.cs" />
+    <Compile Include="IHandleRuleService.cs" />
+    <Compile Include="KeyValueDataService.cs" />
+    <Compile Include="IKeyValueDataService.cs" />
+    <Compile Include="WXMenu.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ForBetter.Domain\Shijia.Domain.csproj">
+      <Project>{5F0F5964-7932-4C0F-B459-A028A5C0E460}</Project>
+      <Name>Shijia.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ForBetter.Dao\Shijia.Dao.csproj">
+      <Project>{DD02DFCF-6013-468A-9E33-788321E1AE53}</Project>
+      <Name>Shijia.Dao</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\xcore\XCore\XCore.csproj">
+      <Project>{e3aa3f45-47ec-4de9-922b-576bbc914705}</Project>
+      <Name>XCore</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Config\objects.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Config\ServiceBase.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="MPMenuService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="IMPMenuService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="MPUserInfoService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="IMPUserInfoService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="MPWechatService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="IMPWechatService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="NoticeService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="INoticeService.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
