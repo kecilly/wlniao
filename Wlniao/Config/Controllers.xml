@@ -1,0 +1,256 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<objects xmlns="http://www.springframework.net">
+
+
+  <!--<object id="DefaultMPWechat" type="Wlniao.HubMethod.Default,Wlniao">
+    <property name="MPWechatService" ref="MPWechatServiceImpl"/>
+  </object>-->
+
+  
+  
+  <object type="~/login.aspx">
+    <property name="AccountService" ref="AccountServiceImpl"/>
+    <property name="KeyValueDataService" ref="KeyValueDataServiceImpl"/>
+  </object>
+  <!--微信api接口-->
+  <object type="~/wxapi.aspx">
+    <property name="AccountService" ref="AccountServiceImpl"/>
+    <property name="MPWechatService" ref="MPWechatServiceImpl"/>
+    <property name="KeyValueDataService" ref="KeyValueDataServiceImpl"/>
+  </object>
+
+  <object type="~/cms1.aspx">   
+    <property name="MPWechatService" ref="MPWechatServiceImpl"/>
+     <property name="HandleRuleService" ref="HandleRuleServiceImpl"/>
+    <property name="AccountService" ref="AccountServiceImpl"/>
+  </object>
+   <object type="~/cms.aspx">   
+    <property name="MPWechatService" ref="MPWechatServiceImpl"/>
+   
+     <property name="AccountService" ref="AccountServiceImpl"/>
+  </object>
+     <object type="~/mobile.aspx">   
+       <property name="AccountService" ref="AccountServiceImpl"/>
+
+  </object>
+
+  <object type="~/default.aspx"  >
+    <property name="AccountService" ref="AccountServiceImpl"/>
+    <property name="MPWechatService" ref="MPWechatServiceImpl"/>
+    <property name="KeyValueDataService" ref="KeyValueDataServiceImpl"/>
+  </object>
+
+  <object type="~/appbox.aspx"  >
+    <property name="AccountService" ref="AccountServiceImpl"/>
+    <property name="KeyValueDataService" ref="KeyValueDataServiceImpl"/>
+  </object>
+
+  <object type="~/topbar.aspx"  >
+    <property name="KeyValueDataService" ref="KeyValueDataServiceImpl"/>
+  </object>
+
+  <object type="~/notice.aspx"  >
+    <property name="AccountService" ref="AccountServiceImpl"/>
+    <property name="NoticeService" ref="NoticeServiceImpl"/>
+    <property name="KeyValueDataService" ref="KeyValueDataServiceImpl"/>
+  </object>
+
+  <object type="~/Rest/WX/SetAppIdAndSecret.aspx"  >
+    <property name="AccountService" ref="AccountServiceImpl"/>
+    <property name="KeyValueDataService" ref="KeyValueDataServiceImpl"/>
+    <property name="MPWechatService" ref="MPWechatServiceImpl"/>
+  </object>
+  <object type="~/Rest/WX/SetNameAndToken.aspx"  >
+    <property name="AccountService" ref="AccountServiceImpl"/>
+    <property name="KeyValueDataService" ref="KeyValueDataServiceImpl"/>
+    <property name="MPWechatService" ref="MPWechatServiceImpl"/>
+  </object>
+  <object type="~/Rest/WX/SetToken.aspx"  >
+    <property name="AccountService" ref="AccountServiceImpl"/>
+  </object>
+
+  <!--微信api接口-->
+  <object type="~/Sys/ChangePwd.aspx">
+    <property name="AccountService" ref="AccountServiceImpl"/>
+    <property name="KeyValueDataService" ref="KeyValueDataServiceImpl"/>
+  </object>
+  <object type="~/Sys/ChangePwdSuccess.aspx">
+    <property name="AccountService" ref="AccountServiceImpl"/>
+    <property name="KeyValueDataService" ref="KeyValueDataServiceImpl"/>
+  </object>
+
+  <!--微信api接口-->
+  <object type="~/Sys/Create.aspx">
+    <property name="AccountService" ref="AccountServiceImpl"/>
+    <property name="MPWechatService" ref="MPWechatServiceImpl"/>
+  </object>
+
+  <object type="~/Sys/HandleRuleForm.aspx">
+    <property name="AccountService" ref="AccountServiceImpl"/>
+    <property name="KeyValueDataService" ref="KeyValueDataServiceImpl"/>
+    <property name="HandleRuleService" ref="HandleRuleServiceImpl"/>
+  </object>
+  <object type="~/Sys/HandleRuleList.aspx">
+    <property name="AccountService" ref="AccountServiceImpl"/>
+    <property name="KeyValueDataService" ref="KeyValueDataServiceImpl"/>
+    <property name="HandleRuleService" ref="HandleRuleServiceImpl"/>
+  </object>
+  <object type="~/Sys/HandleRuleRest.aspx">
+    <property name="AccountService" ref="AccountServiceImpl"/>
+    <property name="KeyValueDataService" ref="KeyValueDataServiceImpl"/>
+    <property name="HandleRuleService" ref="HandleRuleServiceImpl"/>
+    <property name="MPWechatService" ref="MPWechatServiceImpl"/>
+  </object>
+  <object type="~/Sys/HandleRuleSet.aspx">
+    <property name="KeyValueDataService" ref="KeyValueDataServiceImpl"/>
+    <property name="AccountService" ref="AccountServiceImpl"/>
+    <property name="HandleRuleService" ref="HandleRuleServiceImpl"/>
+    <property name="MPWechatService" ref="MPWechatServiceImpl"/>
+  </object>
+  <object type="~/Sys/Init.aspx">
+    <property name="KeyValueDataService" ref="KeyValueDataServiceImpl"/>
+    <property name="AccountService" ref="AccountServiceImpl"/>
+    <property name="MPWechatService" ref="MPWechatServiceImpl"/>
+  </object>
+  <object type="~/Sys/MenuAjax.aspx">
+    <property name="KeyValueDataService" ref="KeyValueDataServiceImpl"/>
+    <property name="AccountService" ref="AccountServiceImpl"/>
+    <property name="MPWechatService" ref="MPWechatServiceImpl"/>
+    <property name="MPMenuService" ref="MPMenuServiceImpl"/>
+  </object>
+  <object type="~/Sys/MenuInfo.aspx">
+    <property name="KeyValueDataService" ref="KeyValueDataServiceImpl"/>
+    <property name="AccountService" ref="AccountServiceImpl"/>
+    <property name="HandleRuleService" ref="HandleRuleServiceImpl"/>
+    <property name="MPMenuService" ref="MPMenuServiceImpl"/>
+  </object>
+  <object type="~/Sys/MenuSet.aspx">
+    <property name="KeyValueDataService" ref="KeyValueDataServiceImpl"/>
+    <property name="AccountService" ref="AccountServiceImpl"/>
+    <property name="MPMenuService" ref="MPMenuServiceImpl"/>
+  </object>
+  <object type="~/Sys/MPUserInfo.aspx">
+    <property name="KeyValueDataService" ref="KeyValueDataServiceImpl"/>
+    <property name="AccountService" ref="AccountServiceImpl"/>
+    <property name="MPWechatService" ref="MPWechatServiceImpl"/>
+    <property name="MPUserInfoService" ref="MPUserInfoServiceImpl"/>
+    
+  </object>
+  <object type="~/Sys/ResponseMsg.aspx">
+    <property name="KeyValueDataService" ref="KeyValueDataServiceImpl"/>
+    <property name="AccountService" ref="AccountServiceImpl"/>
+    <property name="MPWechatService" ref="MPWechatServiceImpl"/>
+  </object>
+  <object type="~/Sys/SendMsg.aspx">
+    <property name="KeyValueDataService" ref="KeyValueDataServiceImpl"/>
+    <property name="AccountService" ref="AccountServiceImpl"/>
+    <property name="MPWechatService" ref="MPWechatServiceImpl"/>
+    <property name="MPUserInfoService" ref="MPUserInfoServiceImpl"/>
+  </object>
+  <object type="~/Sys/Setting.aspx">
+    <property name="KeyValueDataService" ref="KeyValueDataServiceImpl"/>
+    <property name="AccountService" ref="AccountServiceImpl"/>
+    <property name="MPWechatService" ref="MPWechatServiceImpl"/>
+  </object>
+  <object type="~/Sys/WeixinAuth.aspx">
+    <property name="KeyValueDataService" ref="KeyValueDataServiceImpl"/>
+    <property name="AccountService" ref="AccountServiceImpl"/>
+    <property name="MPWechatService" ref="MPWechatServiceImpl"/>
+  </object>
+
+    <object type="~/Sys/Cms/cmsclass.aspx"  >
+    <property name="AccountService" ref="AccountServiceImpl"/>
+    <property name="KeyValueDataService" ref="KeyValueDataServiceImpl"/>
+  </object>
+  
+  <object type="~/Sys/Cms/nav.aspx"  >
+    <property name="AccountService" ref="AccountServiceImpl"/>
+    <property name="KeyValueDataService" ref="KeyValueDataServiceImpl"/>
+  </object>
+
+    <object type="~/Sys/Cms/navset.aspx"  >
+    <property name="AccountService" ref="AccountServiceImpl"/>
+    <property name="KeyValueDataService" ref="KeyValueDataServiceImpl"/>
+  </object>
+    <object type="~/Sys/Cms/news.aspx"  >
+    <property name="AccountService" ref="AccountServiceImpl"/>
+    <property name="KeyValueDataService" ref="KeyValueDataServiceImpl"/>
+  </object>
+    <object type="~/Sys/Cms/site.aspx"  >
+    <property name="AccountService" ref="AccountServiceImpl"/>
+    <property name="KeyValueDataService" ref="KeyValueDataServiceImpl"/>
+    <property name="MPWechatService" ref="MPWechatServiceImpl"/>
+    <property name="HandleRuleService" ref="HandleRuleServiceImpl"/>
+  </object>
+    <object type="~/Sys/Cms/site_banner.aspx"  >
+    <property name="AccountService" ref="AccountServiceImpl"/>
+    <property name="KeyValueDataService" ref="KeyValueDataServiceImpl"/>
+  </object>
+    <object type="~/Sys/Cms/site_color.aspx"  >
+    <property name="AccountService" ref="AccountServiceImpl"/>
+    <property name="KeyValueDataService" ref="KeyValueDataServiceImpl"/>
+  </object>
+    <object type="~/Sys/Cms/site_copyright.aspx"  >
+    <property name="AccountService" ref="AccountServiceImpl"/>
+    <property name="KeyValueDataService" ref="KeyValueDataServiceImpl"/>
+  </object>
+    <object type="~/Sys/Cms/site_logo.aspx"  >
+    <property name="AccountService" ref="AccountServiceImpl"/>
+    <property name="KeyValueDataService" ref="KeyValueDataServiceImpl"/>
+  </object>
+    <object type="~/Sys/Cms/site_logoup.aspx"  >
+    <property name="AccountService" ref="AccountServiceImpl"/>
+    <property name="KeyValueDataService" ref="KeyValueDataServiceImpl"/>
+  </object>
+    <object type="~/Sys/Cms/sitejs.aspx"  >
+    <property name="AccountService" ref="AccountServiceImpl"/>
+    <property name="KeyValueDataService" ref="KeyValueDataServiceImpl"/>
+  </object>
+    <object type="~/Sys/Cms/style.aspx"  >
+    <property name="AccountService" ref="AccountServiceImpl"/>
+    <property name="KeyValueDataService" ref="KeyValueDataServiceImpl"/>
+  </object>
+   <object type="~/Sys/Cms/styleset.aspx"  >
+    <property name="AccountService" ref="AccountServiceImpl"/>
+    <property name="KeyValueDataService" ref="KeyValueDataServiceImpl"/>
+  </object>
+  
+  <!--<object type="Wlniao.Oss, Wlniao">
+    <property name="KeyValueDataService" ref="KeyValueDataServiceImpl"/>
+  </object>-->
+
+
+
+
+
+
+
+  <!--<object type="WebSite.Controllers.HomeController, WebSite" singleton="false" >
+    <property name="UserInfoManager" ref="Manager.UserInfo"/>
+    <property name="CategoryManager" ref="Manager.Category"/>
+    <property name="ForumManager" ref="Manager.Forum"/>
+  </object>
+
+  <object type="WebSite.Controllers.UserInfoController, WebSite" singleton="false" >
+    <property name="UserInfoManager" ref="Manager.UserInfo"/>
+  </object>
+
+  <object type="WebSite.Controllers.ForumController, WebSite" singleton="false" >
+    <property name="ForumManager" ref="Manager.Forum"/>
+  </object>
+
+  <object type="WebSite.Controllers.CategoryController, WebSite" singleton="false" >
+    <property name="CategoryManager" ref="Manager.Category"/>
+    <property name="ForumManager" ref="Manager.Forum"/>
+    <property name="ArticleManager" ref="Manager.Article"/>
+  </object>
+
+  <object type="WebSite.Controllers.ArticleController, WebSite" singleton="false" >
+    <property name="ArticleManager" ref="Manager.Article"/>
+    <property name="CategoryManager" ref="Manager.Category"/>
+    <property name="ForumManager" ref="Manager.Forum"/>
+  </object>
+
+  <object type="MvcFckEditor.Controllers.FckEditorController, MvcFckEditor" singleton="false" />-->
+
+</objects>
