@@ -1,0 +1,1 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="HandleRuleRest.aspx.cs" Inherits="Wlniao.Sys.HandleRuleRest" %>
