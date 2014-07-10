@@ -1,0 +1,18 @@
+<?xml version="1.0"  encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Shijia.Domain" namespace="Shijia.Domain">
+	<class name="Shijia.Domain.HandleRule, Shijia.Domain" table="HandleRule">
+    <id name="Id" type="int"  unsaved-value="0">
+      <column name="Id" index="PK_Account"/>
+      <generator class="identity" />
+    </id>     		
+		<property name="AccountId" column="AccountId" type="int"  />
+		<property name="KeyWord" column="KeyWord" type="string"  not-null="true"/>
+    <property name="Description" column="Description" type="string" />
+		<property name="GetMode" column="GetMode" type="int"  />
+		<property name="MsgType" column="MsgType" type="int" />
+		<property name="RuleLevel" column="RuleLevel" type="int"  />
+		<property name="PushCount" column="PushCount" type="int" />
+		<property name="Content" column="Content" type="string"  />
+				
+	</class>
+</hibernate-mapping>

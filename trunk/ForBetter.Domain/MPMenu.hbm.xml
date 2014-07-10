@@ -1,0 +1,14 @@
+<?xml version="1.0"  encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Shijia.Domain" namespace="Shijia.Domain">
+	<class name="Shijia.Domain.MPMenu, Shijia.Domain" table="MPMenu">
+    <id name="Id" type="int"  unsaved-value="0">
+      <column name="Id" index="PK_Account"/>
+      <generator class="identity" />
+    </id>  		
+		<property name="AccountId" column="AccountId" type="int"  />
+		<property name="MPTreeData" column="MPTreeData" type="string"  />
+		<property name="MPMenuData" column="MPMenuData" type="string"  />
+		<property name="MPMenuSequense" column="MPMenuSequense" type="int"  />
+				
+	</class>
+</hibernate-mapping>
