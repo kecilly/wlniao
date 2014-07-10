@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" ?>
+<objects xmlns="http://www.springframework.net"
+         xmlns:db="http://www.springframework.net/database"
+         xmlns:tx="http://www.springframework.net/tx"
+         >
+  <!--描述-->
+  <description>
+    数据访问的配置信息
+    包括：DbProvider
+          NHibernate
+  </description>
+
+  <!-- 通过主应用程序的上下文配置文件引用 -->
+  <object type="Spring.Objects.Factory.Config.PropertyPlaceholderConfigurer, Spring.Core">
+    <property name="ConfigSections" value="databaseSettings"/>
+  </object>
+
+  <!-- 数据库的配置 -->
+  <db:provider id="DbProvider" provider="${provider}"
+                connectionString="${connectionString}"/>
+
+  <!-- NHibernate 配置 -->
+
+  <!-- 可以通过 name 为其指定别名 name="SessionFactory" -->
+  <object id="NHibernateSessionFactory"
+          type="Spring.Data.NHibernate.LocalSessionFactoryObject,Spring.Data.NHibernate32"
+          >
+
+    <!-- 关于数据库连接的配置，直接使用 DbProvider 中的设置，这样，不需要为 Hibernate 再提供连接串和驱动 -->
+    <property name="DbProvider" ref="DbProvider"/>
+
+    <!-- 包含有映射文件的程序集，需要分析的hbm程序集名称 -->
+    <property name="MappingAssemblies">
+      <list>
+        <value>Shijia.App.Domain</value>
+      </list>
+    </property>
+
+    <!-- 其他的参数 -->
+    <property name="HibernateProperties">
+      <dictionary>
+        <!-- 方言 -->
+        <entry key="dialect" value="${dialect}"/>
+        <entry key="use_proxy_validator" value="false" />
+        <entry key="show_sql" value="true"/>
+        <entry key="proxyfactory.factory_class"
+                 value="NHibernate.Bytecode.DefaultProxyFactoryFactory, NHibernate"/>
+      </dictionary>
+    </property>
+
+    <!-- 必须增加此项说明，与 Spring 的声明式事务集成 -->
+    <property name="ExposeTransactionAwareSessionFactory" value="true" />
+   
+  </object>
+
+  <!--HibernateTemplate模板-->
+  <object id="HibernateTemplate" type="Spring.Data.NHibernate.Generic.HibernateTemplate">
+    <property name="SessionFactory" ref="NHibernateSessionFactory" />
+    <property name="TemplateFlushMode" value="Auto" />
+    <property name="CacheQueries" value="true" />
+  </object>
+
+  <!--ADO.NET Config-->
+  <object id="AdoTemplate" type="Spring.Data.Core.AdoTemplate, Spring.Data">
+    <property name="DbProvider" ref="DbProvider"/>
+    <property name="DataReaderWrapperType" value="Spring.Data.Support.NullMappingDataReader, Spring.Data"/>
+  </object>
+  
+</objects>
