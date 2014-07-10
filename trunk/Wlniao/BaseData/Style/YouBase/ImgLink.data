@@ -1,0 +1,12 @@
+﻿[
+{"Id":Banner,"Desc":"Banner广告位 640*320","Title":"广告位标题","Src":"/BaseData/Style/YouBase/banner.jpg","Link":"#"},
+{"Id":Nav11,"Desc":"导航栏第一列 无图","Title":"标题","Src":"#","Link":"#"},
+{"Id":Nav12,"Desc":"导航栏第二列 无图","Title":"标题","Src":"#","Link":"#"},
+{"Id":Nav13,"Desc":"导航栏第二列 无图","Title":"标题","Src":"#","Link":"#"},
+{"Id":Nav14,"Desc":"导航栏第二列 无图","Title":"标题","Src":"#","Link":"#"},
+{"Id":Nav21,"Desc":"第一行 72*72","Title":"标题","Src":"/BaseData/Style/icons.png","Link":"#"},
+{"Id":Nav22,"Desc":"第二行 72*72","Title":"标题","Src":"/BaseData/Style/icons.png","Link":"#"},
+{"Id":Nav23,"Desc":"第三行 72*72","Title":"标题","Src":"/BaseData/Style/icons.png","Link":"#"},
+{"Id":Nav24,"Desc":"第四行 72*72","Title":"标题","Src":"/BaseData/Style/icons.png","Link":"#"}
+
+]

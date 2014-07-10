@@ -1,0 +1,13 @@
+﻿[
+{"Id":Banner,"Desc":"Banner广告位 640*320","Title":"广告位标题","Src":"/BaseData/Style/Wlniao/banner.jpg","Link":"#"},
+{"Id":Logo,"Desc":"Logo图标","Title":"这里是Logo","Src":"/BaseData/Style/defaultlogo.png","Link":"#"},
+{"Id":Nav11,"Desc":"第一行第一列 72*72","Title":"标题","Src":"/BaseData/Style/icons.png","Link":"#"},
+{"Id":Nav12,"Desc":"第一行第二列 72*72","Title":"标题","Src":"/BaseData/Style/icons.png","Link":"#"},
+{"Id":Nav13,"Desc":"第一行第三列 72*72","Title":"标题","Src":"/BaseData/Style/icons.png","Link":"#"},
+{"Id":Nav14,"Desc":"第一行第四列 72*72","Title":"标题","Src":"/BaseData/Style/icons.png","Link":"#"},
+{"Id":Nav21,"Desc":"第二行第一列 72*72","Title":"标题","Src":"/BaseData/Style/icons.png","Link":"#"},
+{"Id":Nav22,"Desc":"第二行第二列 72*72","Title":"标题","Src":"/BaseData/Style/icons.png","Link":"#"},
+{"Id":Nav23,"Desc":"第二行第三列 72*72","Title":"标题","Src":"/BaseData/Style/icons.png","Link":"#"},
+{"Id":Nav24,"Desc":"第二行第四列 72*72","Title":"标题","Src":"/BaseData/Style/icons.png","Link":"#"}
+
+]
