@@ -1,0 +1,64 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MiNiPage.Master.cs" Inherits="WebTest.Site1" %>
+<!DOCTYPE HTML>
+<html>
+<head runat="server">
+	<meta charset="UTF-8">
+    <script src="static/jquery.min.js"></script>
+    <script src="static/tips/tips.js"></script>
+	<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	<link rel="stylesheet" type="text/css" href="css/style.css" media="screen" />   
+     <script language="javascript" type="text/javascript">
+         document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
+             WeixinJSBridge.call('hideOptionMenu');
+             WeixinJSBridge.call('hideToolbar');
+     });
+ </script>
+	<!--[if lt IE 9]>
+		<script src="/static/html5.js"></script>
+	<![endif]-->
+    <asp:ContentPlaceHolder ID="head" runat="server">
+        
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <div id="wrapper">
+    <form id="form1" runat="server">
+        <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </form>
+     </div>
+    <!-- JQuery -->
+
+<script src="includes/slider.js"></script>
+<script src="includes/scrolling.js"></script>
+<script src="includes/scripts.js"></script>
+ <script language="javascript" type="text/javascript">
+     function showTips(msg, icon, url) {
+         var _icon = 1;
+         if (icon) {
+             _icon = icon;
+         }
+         ZENG.msgbox.show('&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;' + msg + '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;', _icon, 1800);
+         if (url) {
+             setTimeout(showMainFrame(url), 100);
+         }
+     }
+
+     function showMainFrame(url) {
+         onhome = false;
+         if (iheig == 0) {
+             iheig = $('#slidebar').height() - 50;
+         }
+         $('#dashboard').hide();
+         //$("#thisFramePage").contents().find("body").empty();
+         $("#mainFrame").html('<iframe id="thisFramePage" src="' + url + '" frameborder="0" marginheight="0" marginwidth="0" scrolling="auto" width="100%" height="' + iheig + 'px"></iframe> ');
+         $('#mainFrame').show();
+     }
+   
+ </script>
+</body>
+</html>
