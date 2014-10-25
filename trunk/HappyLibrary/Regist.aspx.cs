@@ -226,7 +226,7 @@ namespace HappyLibrary
                                 sb.AppendFormat("<CreateTime>{0}</CreateTime>", Senparc.Weixin.Helpers.DateTimeHelper.GetWeixinDateTime(DateTime.Now));
                                 sb.AppendFormat("<MsgType><![CDATA[text]]></MsgType>");
                                 sb.AppendFormat("<Content><![CDATA[{0}]]></Content>",
-                                    "　　欢迎您绑定图书证，轻松绑定后即可享受以下贴心服务：\n1.查询借阅记录。\n2.预约借书。\n3.预约还书。\n\n" +
+                                    "　　欢迎您绑定借书证，轻松绑定后即可享受以下贴心服务：\n1.查询借阅记录。\n2.预约借书。\n3.预约还书。\n\n" +
                                     "<a href='http://happylibrary.x7.com/regist.aspx?do=first&openid=" +
                                     openid.Value + "'>点击这里，立即绑定</a>");
                                 //sb.AppendFormat("<Content><![CDATA[{0}]]></Content>",
