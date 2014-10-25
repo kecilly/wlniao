@@ -7,7 +7,8 @@
         <meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui" name="viewport">
         <meta content="no" name="apple-mobile-web-app-capable">
         <meta content="black" name="apple-mobile-web-app-status-bar-style">
-        <meta content="当当网触屏版" name="application-name">
+        <meta content="快乐少年图书馆" name="application-name">
+        <script src="js/jquery.min.js"></script>
         <meta content="must-revalidate,no-cache" http-equiv="Cache-Control">
     <title></title>
     <link href="css/login.css" rel="stylesheet" type="text/css">
@@ -22,9 +23,10 @@
                 </div>
             </header>
             <form id="form1" runat="server">
+                <asp:Panel runat="server" ID="pnbanding">
                 <section class="login_wrap">
                     <div class="field username">
-                        <input class="uname" type="text" id="txtUser" name="txtUser" value="" placeholder="请输入手机号" maxlength="11" autocomplete="off" tabindex="1"/>
+                        <input  class="uname" type="text" id="txtUser" name="txtUser" value="" placeholder="请输入手机号" maxlength="11" autocomplete="off" tabindex="1"/>
                         <p>
                             <a href="javascript:void(0);" class="del-btn"></a>
                         </p>
@@ -35,21 +37,23 @@
                             <a href="javascript:this.src='ValidateCode.aspx?rnd=' + Math.random();" class="del-btn"></a>
                         </p>
                         <span class="pic_code"><img id="imgVcode" src="ValidateCode.aspx"></span>
-                        <a class="imgUpdate" name="imgUpdate" href="javascript:void(this);">换一张</a>
+                        <a class="imgUpdate" name="imgUpdate" href="javascript:rfcode();">换一张</a>
                     </div>
                     <div class="field">
-                        <button type="button" id="btnGetSms" name="btnGetSms">获取验证码</button>
+                        <button type="button" id="btnGetSms" name="btnGetSms" onclick="JAVASCRIPT:BandCardInfo();return false;">关联</button>
                     </div>
-                    <div class="field zhuce_text">点击注册表示您同意《<a href="http://m.dangdang.com/help_center.php?page=20&sid=e1302e814144631e">当当交易条款</a>》和《<a href="http://m.dangdang.com/help_center.php?page=21&sid=e1302e814144631e">当当社区条款</a>》</div>
-                    <div class="login_mode"><a href="reg_email.php?apkparams=ZnJvbWxvZ2luPTAmJnNpZD1lMTMwMmU4MTQxNDQ2MzFlJmJ1cmw9aHR0cDovL20uZGFuZ2RhbmcuY29tL3RvdWNoL29yZGVyLnBocD9zaWQ9ZTEzMDJlODE0MTQ0NjMxZQ==" name="btnEmailReg" class="right">邮箱注册</a></div>
-                </section>
-                <div>
-                    <input type="hidden" id="action" name="action" value="register" />
-                    <input type="hidden" id="view" name="view" value="0fBHZY+a4Qw="/>
-                    <input type="hidden" id="captcha_key" name="captcha_key" value="touch_1414074909942376903" />
-                    <input type="hidden" id="apkparams" name="apkparams" value="ZnJvbWxvZ2luPTAmJnNpZD1lMTMwMmU4MTQxNDQ2MzFlJmJ1cmw9aHR0cDovL20uZGFuZ2RhbmcuY29tL3RvdWNoL29yZGVyLnBocD9zaWQ9ZTEzMDJlODE0MTQ0NjMxZQ==" />
-                    <input type="submit"  id="btnReg1" style=" display:none;"/>
-                </div>
+                    </section>
+                 </asp:Panel>
+                <asp:Panel runat="server" ID="pninfo" Visible="False">
+                    <section class="login_wrap">
+                        <div class="field username">
+                         <p>　　您已经绑定“快乐少年图书馆”借书卡。</p>
+                    </div>
+                        </section>
+                    </asp:Panel>
+                    <asp:HiddenField ID="timestamp" runat="server" />
+                    <asp:HiddenField ID="openid" runat="server" />
+                    <asp:HiddenField ID="firstid" runat="server" />
             </form>
             <section id="errMsg" class="error_mm"><span class="text"></span></section>
             <section class="error_mm error_loading">
@@ -58,17 +62,45 @@
                 </div>
                 <span class="text">正在加载 ...</span>
             </section>
-        </article>
+   </article>
         <script src="js/zepto.js" type="text/javascript"></script>
         <script src="js/zepto.touch.js" type="text/javascript"></script>
         <script src="js/comdd.js" type="text/javascript"></script>
         <script src="js/mobilZC1.js" type="text/javascript"></script>
         <script type="text/javascript">
             var errorcode = parseInt(0);
-            function(object mm3)
+            function rfcode()
             {
-                d            };
+                $("#imgVcode").attr("src", "ValidateCode.aspx?rnd=" + Math.random()); 
+            };
         </script>
+     <script type="text/javascript">
+         function BandCardInfo() {
+             if ($('#txtUser').val() == '') {
+                 alert('手机号不能为空!');
+                 return false;
+             }
+             else if ($('#txtUser').val().length != 11)
+             {
+                 alert('手机号长度不正确!');
+                 return false;
+             }
+             if ($('#txtVcode').val() == '') {
+                 alert('验证码不能为空!');
+                 return false;
+             }
+
+             $.getJSON("regist.aspx?rnd=" + Math.random(), { "do": "Add", "name": $('#txtUser').val(), "password": $('#txtVcode').val(),  "openid": $('#<%=openid.ClientID%>').val(), "firstid": $('#firstid').val() }, function (json) {
+                if (json.success) {
+                    location.reload();
+                } else {
+                    alert(json.msg);
+                }
+            });
+        }
+    </script>
+
+
 </body>
 </html>
 

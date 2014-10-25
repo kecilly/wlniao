@@ -21,6 +21,10 @@
     <IISExpressUseClassicPipelineMode />
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
     <RestorePackages>true</RestorePackages>
+    <SccProjectName>Svn</SccProjectName>
+    <SccLocalPath>Svn</SccLocalPath>
+    <SccAuxPath>Svn</SccAuxPath>
+    <SccProvider>SubversionScc</SccProvider>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -40,7 +44,16 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="GotDotNet.ApplicationBlocks.Data">
+      <HintPath>..\WebTest\bin\GotDotNet.ApplicationBlocks.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net">
+      <HintPath>..\WebTest\bin\log4net.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Senparc.Weixin">
+      <HintPath>..\Wlniao\bin\Senparc.Weixin.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Core" />
@@ -109,6 +122,7 @@
     <Content Include="Default.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
+    <Content Include="js\jquery.min.js" />
     <Content Include="packages.config" />
     <Content Include="Regist.aspx" />
     <Content Include="ValidateCode.aspx" />
@@ -157,6 +171,10 @@
     <ProjectReference Include="..\Wlniao.App\Shijia.App.csproj">
       <Project>{10613d0d-0889-4215-a2c4-f6b4b347b6bf}</Project>
       <Name>Shijia.App</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\xcore\XCore\XCore.csproj">
+      <Project>{e3aa3f45-47ec-4de9-922b-576bbc914705}</Project>
+      <Name>XCore</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
