@@ -19,7 +19,7 @@
             <header>
                 <div class="new_header">
                                             <a href="javascript:history.back();" class="xph_back"><span>返回</span></a>
-                                            <h2>注册新用户</h2>
+                                            <h2>微信用户绑定借书卡</h2>
                 </div>
             </header>
             <form id="form1" runat="server">
@@ -45,11 +45,11 @@
                     </section>
                  </asp:Panel>
                 <asp:Panel runat="server" ID="pninfo" Visible="False">
-                    <section class="login_wrap">
-                        <div class="field username">
-                         <p>　　您已经绑定“快乐少年图书馆”借书卡。</p>
-                    </div>
-                        </section>
+                    <header>
+                <div class="new_header">
+                                            <h2>　　您已经绑定“快乐少年图书馆”借书卡。</h2>
+                </div>
+            </header>
                     </asp:Panel>
                     <asp:HiddenField ID="timestamp" runat="server" />
                     <asp:HiddenField ID="openid" runat="server" />
