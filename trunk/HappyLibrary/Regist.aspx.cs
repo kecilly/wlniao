@@ -84,7 +84,8 @@ namespace HappyLibrary
                                     "update Member  set WeixinID=@WeixinID where Tel=@Tel",
                                     prasParameters
                                     );
-
+                                pnbanding.Visible = false;
+                                pninfo.Visible = true;
                             }
                             catch
                             {
