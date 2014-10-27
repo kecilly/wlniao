@@ -136,7 +136,7 @@ namespace HappyLibrary
                         if (WeiXinCard > 0)
                         {
                             WeiXinCard = Convert.ToInt32(SqlHelper.ExecuteScalar(SQLConn, CommandType.Text,
-                                "update  WeiXinCard set WXOpenID=''   where WXOpenID=@openid ",
+                                "update  Member set WeixinID=''   where WeixinID=@openid ",
                                 new SqlParameter("@openid", openid.Value)));
 
                             StringBuilder sb = new StringBuilder();
@@ -172,10 +172,17 @@ namespace HappyLibrary
                     catch (Exception ex)
                     {
                         StringBuilder sb = new StringBuilder();
-                        sb.AppendFormat(strUtil.RemoveHtmlTag("访问来源不明，请从微信共众平台访问。"+ex.Message));
-                        logger.Info("访问来源不明，请从微信共众平台访问。" + sb.ToString());
+                        sb.AppendFormat("<xml>");
+                        sb.AppendFormat("<ToUserName><![CDATA[{0}]]></ToUserName>", openid.Value);
+                        sb.AppendFormat("<FromUserName><![CDATA[{0}]]></FromUserName>", firstid.Value);
+                        sb.AppendFormat("<CreateTime>{0}</CreateTime>", Senparc.Weixin.Helpers.DateTimeHelper.GetWeixinDateTime(DateTime.Now));
+                        sb.AppendFormat("<MsgType><![CDATA[text]]></MsgType>");
+                        sb.AppendFormat("<Content><![CDATA[{0}]]></Content>",
+                            strUtil.RemoveHtmlTag("解除出错。" + ex.Message));
+                        sb.AppendFormat("<FuncFlag>0</FuncFlag>");
+                        sb.AppendFormat("</xml>");
+                        logger.Info("解除图书证绑定返回---" + sb.ToString());
                         Response.Write(sb.ToString());
-
                     }
                     finally
                     {
